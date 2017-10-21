@@ -1,0 +1,216 @@
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\ApplicationInsights.config
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\roslyn\csc.exe
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\roslyn\System.Collections.Immutable.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\roslyn\vbc.exe
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\roslyn\VBCSCompiler.exe
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\roslyn\VBCSCompiler.exe.config
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\DuLink.dll.config
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\DuLink.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\DuLink.pdb
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Antlr3.Runtime.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\EntityFramework.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\EntityFramework.SqlServer.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.AI.Web.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.AI.WindowsServer.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.ApplicationInsights.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.Owin.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.Owin.Security.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.Owin.Security.Google.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.Web.Infrastructure.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\MongoDB.Bson.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\MongoDB.Driver.Core.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\MongoDB.Driver.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Newtonsoft.Json.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Owin.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\System.Web.Helpers.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\System.Web.Mvc.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\System.Web.Optimization.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\System.Web.Razor.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\System.Web.WebPages.Deployment.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\System.Web.WebPages.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\System.Web.WebPages.Razor.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\WebGrease.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.AI.Web.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.AI.WindowsServer.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.ApplicationInsights.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\MongoDB.Bson.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\MongoDB.Driver.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\MongoDB.Driver.Core.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\System.Web.Helpers.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\System.Web.Mvc.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\System.Web.Optimization.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\System.Web.Razor.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\System.Web.WebPages.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\System.Web.WebPages.Deployment.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\System.Web.WebPages.Razor.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Antlr3.Runtime.pdb
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Newtonsoft.Json.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\EntityFramework.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\EntityFramework.SqlServer.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.Owin.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.Owin.Security.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.Owin.Security.Google.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\es\System.Web.Helpers.resources.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\es\System.Web.Mvc.resources.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\es\System.Web.Optimization.resources.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\es\System.Web.Razor.resources.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\es\System.Web.WebPages.resources.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\es\System.Web.WebPages.Deployment.resources.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\es\System.Web.WebPages.Razor.resources.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\es\EntityFramework.resources.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\es\EntityFramework.SqlServer.resources.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\es\Microsoft.Owin.resources.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\es\Microsoft.Owin.Security.resources.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\es\Microsoft.Owin.Security.Google.resources.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\obj\Debug\DuLink.dll
+c:\users\visitante\documents\visual studio 2015\Projects\DuLink\DuLink\obj\Debug\DuLink.pdb
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\ApplicationInsights.config
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\roslyn\csc.exe
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\roslyn\System.Collections.Immutable.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\roslyn\System.Reflection.Metadata.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\roslyn\vbc.exe
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\roslyn\VBCSCompiler.exe
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\roslyn\VBCSCompiler.exe.config
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\DuLink.dll.config
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\DuLink.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\DuLink.pdb
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Antlr3.Runtime.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\EntityFramework.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\EntityFramework.SqlServer.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.AI.Agent.Intercept.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.AI.DependencyCollector.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.AI.Web.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.AI.WindowsServer.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.ApplicationInsights.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.AspNet.Identity.Core.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.Owin.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.Owin.Security.Cookies.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.Owin.Security.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.Owin.Security.Facebook.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.Owin.Security.Google.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.Owin.Security.OAuth.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.Owin.Security.Twitter.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.Web.Infrastructure.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\MongoDB.Bson.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\MongoDB.Driver.Core.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\MongoDB.Driver.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Newtonsoft.Json.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Owin.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\System.Web.Helpers.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\System.Web.Mvc.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\System.Web.Optimization.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\System.Web.Razor.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\System.Web.WebPages.Deployment.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\System.Web.WebPages.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\System.Web.WebPages.Razor.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\WebGrease.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.AI.DependencyCollector.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.AI.Web.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.AI.WindowsServer.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.ApplicationInsights.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\MongoDB.Bson.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\MongoDB.Driver.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\MongoDB.Driver.Core.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\System.Web.Helpers.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\System.Web.Mvc.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\System.Web.Optimization.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\System.Web.Razor.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\System.Web.WebPages.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\System.Web.WebPages.Deployment.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\System.Web.WebPages.Razor.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Antlr3.Runtime.pdb
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Newtonsoft.Json.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\EntityFramework.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\EntityFramework.SqlServer.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.AspNet.Identity.Core.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.Owin.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.Owin.Security.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.Owin.Security.Facebook.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.Owin.Security.Cookies.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.Owin.Security.OAuth.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.Owin.Security.Google.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.Owin.Security.Twitter.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\es\System.Web.Helpers.resources.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\es\System.Web.Mvc.resources.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\es\System.Web.Optimization.resources.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\es\System.Web.Razor.resources.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\es\System.Web.WebPages.resources.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\es\EntityFramework.resources.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\es\EntityFramework.SqlServer.resources.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\es\Microsoft.Owin.resources.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\es\Microsoft.Owin.Security.resources.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\es\Microsoft.Owin.Security.Google.resources.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\obj\Debug\DuLink.csprojResolveAssemblyReference.cache
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\obj\Debug\DuLink.csproj.CoreCompileInputs.cache
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\obj\Debug\DuLink.dll
+D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\obj\Debug\DuLink.pdb
