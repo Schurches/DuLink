@@ -7,7 +7,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace DuLink.Entities
 {
-    public class Account
+    public class JobOffer
     {
         [BsonId]
         public ObjectId Id
@@ -15,60 +15,60 @@ namespace DuLink.Entities
             get;
             set;
         }
-        [BsonElement("EmployeeName")]
+
+        [BsonElement("JobOfferName")]
         public String Name
         {
             get;
             set;
         }
-        [BsonElement("EmployeeLastName")]
-        public String LastName
+        
+        [BsonElement("JobOfferSalary")]
+        public int Salary
         {
             get;
             set;
         }
-        [BsonElement("EmployeeUsername")]
-        public String UserName
+        [BsonElement("JobOfferDescription")]
+        public String Description
+        {
+            get;
+            set;
+
+        }
+        [BsonElement("JobOfferContact")]
+        public String Contact
         {
             get;
             set;
         }
-        [BsonElement("EmployeePassword")]
-        public String Password
+        [BsonElement("JobOfferContactPhoneNumber")]
+        public String ContactPhoneNumber
         {
             get;
             set;
         }
-        [BsonElement("EmployeeMail")]
-        public String Mail
+        [BsonElement("JobPosition")]
+        public String Position
         {
             get;
             set;
         }
-        [BsonElement("EmployeeCareer")]
-        public String Career
+        [BsonElement("JobCompanyName")]
+        public String CompanyName
+        {
+            get;
+            set;
+        }
+        [BsonElement("JobStartDate")]
+        public DateTime StartDate
         {
             get;
             set;
         }
 
-        [BsonElement("EmployeeSemester")]
-        public String Semester
-        {
-            get;
-            set;
-        }
-
-
-        [BsonElement("EmployeeFriends")]
-        public List<String> FriendsList
-        {
-            get;
-            set;
-        }
-
-        [BsonElement("EmployeeJobs")]
-        public List<String> JobsList
+        [BsonElement("JobEndDate")]
+        public DateTime EndDate
         {
             get;
             set;

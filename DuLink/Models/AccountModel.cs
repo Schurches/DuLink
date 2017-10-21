@@ -21,17 +21,69 @@ namespace DuLink.Models
             accountCollection = db.GetCollection<Account>("Employee");
         }
 
-        public List<Account> findAll() {
+        public List<Account> FindAll() {
             return accountCollection.AsQueryable<Account>().ToList();
         }
 
-        public Account findAccount(string id)
+        public List<Account> FindAllByCareer(String CareerKeyWords)
+        {
+            List<Account> lista = accountCollection.AsQueryable<Account>().ToList();
+            List<Account> listaResult = new List<Account>();
+            foreach (Account i in lista)
+            {
+                if (i.Career.Contains(CareerKeyWords)) {
+                    listaResult.Add(i);
+                }
+            }
+            return listaResult;
+        }
+        public List<Account> FindAllBySemester(String semesterKeyWords)
+        {
+            List<Account> lista = accountCollection.AsQueryable<Account>().ToList();
+            List<Account> listaResult = new List<Account>();
+            foreach (Account i in lista)
+            {
+                if (i.Semester.Contains(semesterKeyWords))
+                {
+                    listaResult.Add(i);
+                }
+            }
+            return listaResult;
+        }
+        public List<Account> FindAllByName(String nameKeyWords)
+        {
+            List<Account> lista = accountCollection.AsQueryable<Account>().ToList();
+            List<Account> listaResult = new List<Account>();
+            foreach (Account i in lista)
+            {
+                if (i.Name.Contains(nameKeyWords))
+                {
+                    listaResult.Add(i);
+                }
+            }
+            return listaResult;
+        }
+        public List<Account> FindAllByLastName(String lastNameKeyWords)
+        {
+            List<Account> lista = accountCollection.AsQueryable<Account>().ToList();
+            List<Account> listaResult = new List<Account>();
+            foreach (Account i in lista)
+            {
+                if (i.LastName.Contains(lastNameKeyWords))
+                {
+                    listaResult.Add(i);
+                }
+            }
+            return listaResult;
+        }
+
+        public Account FindAccount(string id)
         {
             var accountId = new ObjectId(id);
             return accountCollection.AsQueryable<Account>().SingleOrDefault(a => a.Id == accountId);
         }
 
-        public void createAccount(Account account)
+        public void CreateAccount(Account account)
         {
             accountCollection.InsertOne(account);
         }
