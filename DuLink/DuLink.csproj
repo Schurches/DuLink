@@ -214,6 +214,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JobOfferController.cs" />
     <Compile Include="Controllers\PerfilController.cs" />
     <Compile Include="Entities\JobOffer.cs" />
     <Compile Include="Entities\Jobs.cs" />
@@ -269,6 +270,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Perfil\Index.cshtml" />
+    <Content Include="Views\JobOffer\PostOffer.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
