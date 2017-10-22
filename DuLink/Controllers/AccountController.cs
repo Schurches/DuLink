@@ -52,7 +52,15 @@ namespace DuLink.Controllers
                 {
                     if (user.Password.Equals(loggedUser.Password))
                     {
+                        Session["Name"] = user.Name;
+                        Session["ID"] = user.Id;
+                        Session["LastName"] = user.LastName;
+                        Session["Email"] = user.Mail;
+                        Session["Career"] = user.Career;
+                        Session["Semester"] = user.Semester;
                         Session["Username"] = loggedUser.UserName;
+                        ViewBag.Jobs = user.JobsList;
+                        ViewBag.Friends = user.FriendsList;
                         return true;
                     }
                     else
@@ -73,7 +81,15 @@ namespace DuLink.Controllers
 
         public ActionResult LogOut()
         {
+            Session["Name"] = null;
+            Session["ID"] = null;
+            Session["LastName"] = null;
+            Session["Email"] = null;
+            Session["Career"] = null;
+            Session["Semester"] = null;
             Session["Username"] = null;
+            ViewBag.Jobs = null;
+            ViewBag.Friends = null;
             return RedirectToAction("Index", "Home");
         }
         

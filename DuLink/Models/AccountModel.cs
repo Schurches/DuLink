@@ -88,6 +88,15 @@ namespace DuLink.Models
             accountCollection.InsertOne(account);
         }
 
+        public void addJobToUser(Account account)
+        {
+            var filter = Builders<BsonDocument>.Filter.Eq("Name", account.Name);
+            //var update = Builders<BsonDocument>.Update.Set("JobList", "American (New)").CurrentDate("lastModified");
+            //accountCollection.UpdateOne(filter,account);
+            //var result = await collection.UpdateOneAsync(filter, update);
+            
+        }
+
    
     }
 }
