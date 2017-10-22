@@ -1,7 +1,7 @@
 ﻿@using Microsoft.AspNet.Identity
 @if (Session["Username"] != null)
 {
-    <div class="navbar-nav mr-auto col-sm-12 col-md-3 justify-content-end">
+    <div class="navbar-nav">
         <a href="@Url.Action("Index", "Perfil")" class="nav-item nav-link">@Session["Username"]</a>
         <a href="@Url.Action("LogOut", "Account")" class="nav-item nav-link">Log out</a>
     </div>

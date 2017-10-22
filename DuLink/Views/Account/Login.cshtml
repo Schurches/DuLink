@@ -1,19 +1,19 @@
 ﻿@model DuLink.Entities.Account
 <div class="row pt-4">
     <div class="col-md-8">
-        @using (Html.BeginForm("Login", "Account", FormMethod.Post))
-        {
-            @Html.AntiForgeryToken()
-
             <div class="form-horizontal">
+            
                 <div class="col-12">
                     <h3 class="lead">Log in to find job offers and connect with your buddies!.</h3>
+                    <hr />
                 </div>
 
-                @if (Session["CurrentErrorMessage"] != null)
+            @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                if (Session["CurrentErrorMessage"] != null)
                 {
                     <div class="col-12">
-                        <hr />
                         <p>@Session["CurrentErrorMessage"]</p>
                     </div>
                 }
@@ -37,8 +37,8 @@
                         <input type="submit" value="Log in" class="btn btn-primary my-2" />
                     </div>
                 </div>
-            </div>
-        }
+            }
+        </div>
     </div>
 </div>
 <div>
