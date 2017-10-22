@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using DuLink.Models;
-using MongoDB.Driver;
 using DuLink.Entities;
 using System.Configuration;
 
@@ -12,24 +11,12 @@ namespace DuLink.Controllers
 {
     public class AccountController : Controller
     {
-        private MongoClient mongoClient;
-        private IMongoCollection<Account> accountCollection;
+        AccountModel accountModel = new AccountModel();
         // GET: Account
         public ActionResult Index()
         {
-            AccountModel account = new AccountModel();
-            ViewBag.LISTA = account.FindAll();
+            ViewBag.LISTA = accountModel.FindAll();
             return View();
-        }
-
-        public void iniAccountList()
-        {
-            if (accountCollection == null)
-            {
-                mongoClient = new MongoClient(ConfigurationManager.AppSettings["mongoDBHost"]);
-                var db = mongoClient.GetDatabase(ConfigurationManager.AppSettings["mongoDBName"]);
-                accountCollection = db.GetCollection<Account>("Employee");
-            }
         }
 
 
@@ -39,8 +26,7 @@ namespace DuLink.Controllers
 
         [HttpGet]
         public ActionResult Login()
-        {
-            iniAccountList();
+        {      
             return View();
         }
 
@@ -48,7 +34,7 @@ namespace DuLink.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(Account currentUser)
         {
-            iniAccountList();
+            
             if (loginMatches(currentUser))
             {
                 Session["CurrentErrorMessage"] = null;
@@ -59,7 +45,7 @@ namespace DuLink.Controllers
 
         private bool loginMatches(Account loggedUser)
         {
-            List<Account> allUsers = accountCollection.AsQueryable<Account>().ToList();
+            List<Account> allUsers = accountModel.FindAll();
             foreach (Account user in allUsers)
             {
                 if (user.UserName.Equals(loggedUser.UserName))
@@ -86,20 +72,18 @@ namespace DuLink.Controllers
 
         public ActionResult Registro()
         {
-            iniAccountList();
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Registro(Account nuevoUser)
-        {
-            iniAccountList();
+        {           
             if (ModelState.IsValid)
             {
                 if (isUserAllowed(nuevoUser))
                 {
-                    accountCollection.InsertOne(nuevoUser);
+                    accountModel.CreateAccount(nuevoUser);
                     Session["CurrentErrorMessage"] = "Registration Successful, now log in!";
                     return RedirectToAction("Login");
                 }
@@ -117,7 +101,7 @@ namespace DuLink.Controllers
 
         
         private bool isUserAllowed(Account usuario) {
-            List<Account> allUsers = accountCollection.AsQueryable<Account>().ToList();
+            List<Account> allUsers = accountModel.FindAll();
             foreach (Account user in allUsers)
             {
                 if (user.UserName.Equals(usuario.UserName))
