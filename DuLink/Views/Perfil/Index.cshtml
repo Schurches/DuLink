@@ -1,30 +1,40 @@
-﻿@{
+﻿@model DuLink.Entities.Jobs
+@{
     ViewBag.Title = "Perfil";
 }
 
-<div class="row pt-4">
+<div class="container-fluid row pt-4">
     <div class="col-lg-3 col-md-5 col-sm-12 text-center">
         <div class="row justify-content-center rounded" style="min-width:281px;background-color:white;border:1px solid #ccc">
 
             <div class="col-12 mt-1">
                 <div class="my-2">
+<<<<<<< HEAD
                     <span class="card-title h2">Jondoe</span>
                 </div>
                 <div class="img-thumbnail" style="overflow:hidden">
                     <img src="~/Content/as.jpg" alt="Imagen del perfil" style="max-height:240px;min-height:230px" />
+=======
+                    <span class="card-title h2">@Session["Username"]</span>
+                </div>
+                <div class="img-thumbnail" style="overflow:hidden">
+                    <img src="~/Content/andre.jpg" alt="Profile Pic" style="max-height:240px;min-height:230px" />
+>>>>>>> 0ccc9611c8d28d1c7bca13fbe6e2a712b4fcbc2e
                 </div>
             </div>
 
             <div class="my-2">
-                <span class="h5">Infomarción</span>
+                <span class="h5">Information</span>
             </div>
 
             <div class="col-12">
                 <hr class="my-0" />
             </div>
 
+            <!-- Profile information-->
             <div class="mt-2 col-12">
                 <div class="py-2 my-1 trabajoPlantilla">
+<<<<<<< HEAD
                     <span class="text-muted mr-2">Nombre:</span>
                     <span id="name">Andrea</span>
                 </div>
@@ -43,99 +53,100 @@
                 <div class="py-2 my-1 trabajoPlantilla">
                     <span class="text-muted mr-2">Semestre:</span>
                     <span id="semester">4</span>
+=======
+                    <span class="text-muted mr-2">Name:</span>
+                    <span id="name">@Session["Name"]</span>
+                </div>
+                <div class="py-2 my-1 trabajoPlantilla">
+                    <span class="text-muted mr-2">Last Name:</span>
+                    <span id="lastName">@Session["LastName"]</span>
+                </div>
+                <div class="py-2 my-1 trabajoPlantilla">
+                    <span class="text-muted mr-2">Email:</span>
+                    <span id="email">@Session["Email"]</span>
+                </div>
+                <div class="py-2 my-1 trabajoPlantilla">
+                    <span class="text-muted mr-2">Career:</span>
+                    <span id="carrer">@Session["Career"]</span>
+                </div>
+                <div class="py-2 my-1 trabajoPlantilla">
+                    <span class="text-muted mr-2">Semester:</span>
+                    <span id="semester">@Session["Semester"]</span>
+>>>>>>> 0ccc9611c8d28d1c7bca13fbe6e2a712b4fcbc2e
                 </div>
             </div>
         </div>
     </div>
     <div class="col-lg-9 col-md-7 col-sm-12">
         <div class="row">
-
+            <!-- Job information-->
             <div class="container">
 
                 <div class="col-12">
-                    <h3>Trabajos</h3>
+                    <h3>Job history</h3>
                 </div>
                 <div>
                     <hr class="my-0" />
                 </div>
-                <div class="col-12 my-3">
-                    <h5>Agregar trabajo</h5>
-                    <form class="form-group row">
-                        <div class="col-md-6">
-                            <label>Compañía</label>
-                            <input class="form-control" type="text" name="name" value="" />
-                        </div>
-                        <div class="col-md-6">
-                            <label>Cargo</label>
-                            <input class="form-control" type="text" name="name" value="" />
-                        </div>
-                        <div class="col-md-6">
-                            <label>Desde</label>
-                            <input class="form-control" type="date" name="name" value="" />
-                        </div>
-                        <div class="col-md-6">
-                            <label>Desde</label>
-                            <input class="form-control" type="date" name="name" value="" />
-                        </div>
-                        <div class="col-12 my-2">
-                            <button class="btn btn-outline-dark" type="submit">Agregar</button>
-                        </div>
-                    </form>
-                </div>
-                <div style="height:340px;overflow:scroll">
-                    <!--Plantilla trabajos-->
-                    <div class="my-3 trabajoPlantilla">
-                        <div class="ml-2">
-                            <span class="h4">Google</span>
-                            <p>Administrador de proyectos</p>
-                            <span class="text-muted">desde:</span><span class="small">21/Oct/2011</span><span class="text-muted ml-4">hasta:</span><span class="small">Atual</span>
-                        </div>
+                @using (Html.BeginForm("AddJob", "Perfil", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="col-12 my-3">
+                        <h5>Add a new job</h5>
+                        <form class="form-group row">
+                            <div class="col-md-6">
+                                <label>Company</label>
+                                @Html.EditorFor(model => model.CompanyName, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.CompanyName, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-6">
+                                <label>Charge</label>
+                                @Html.EditorFor(model => model.Position, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Position, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-6">
+                                <label>Since</label>
+                                @Html.EditorFor(model => model.StartDate, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-6">
+                                <label>Until</label>
+                                @Html.EditorFor(model => model.EndDate, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.EndDate, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-12 my-2">
+                                <button class="btn btn-outline-dark" type="submit">Add</button>
+                            </div>
+                        </form>
                     </div>
+                }
+                @if (ViewBag.Jobs != null)
+                {
+                    <div style="height:340px;overflow:scroll">
+                        <!--Job records-->
+                        @foreach (var job in ViewBag.Jobs)
+                        {
+                            <div class="my-3 trabajoPlantilla">
+                                <div class="ml-2">
+                                    <span class="h4">@job.CompanyName</span>
+                                    <p>@job.Position</p>
+                                    <span class="text-muted">Since:</span><span class="small">@job.StartDate</span>
+                                    @if (job.EndDate != null)
+                                    {
+                                        <span class="text-muted ml-4">Until:</span><span class="small">job.EndDate</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-muted ml-4">Until:</span><span class="small">Currently</span>
+                                    }
+                                </div>
+                            </div>
+                        })
 
-                    <div class="my-3 trabajoPlantilla">
-                        <div class="ml-2">
-                            <span class="h4">Microsoft</span>
-                            <p>Jefe de Bill Gates</p>
-                            <span class="text-muted">desde:</span><span class="small">2/Ago/2008</span><span class="text-muted ml-4">hasta:</span><span class="small">30/Dic/2011</span>
-                        </div>
                     </div>
-
-                    <div class="my-3 trabajoPlantilla">
-                        <div class="ml-2">
-                            <span class="h4">Apple</span>
-                            <p>EL que inspiraba a Steve Jobs</p>
-                            <span class="text-muted">desde:</span><span class="small">7/May/2006</span><span class="text-muted ml-4">hasta:</span><span class="small">1/Ago/2008</span>
-                        </div>
-                    </div>
-
-                    <div class="my-3 trabajoPlantilla">
-                        <div class="ml-2">
-                            <span class="h4">Google</span>
-                            <p>Administrador de proyectos</p>
-                            <span class="text-muted">desde:</span><span class="small">21/Oct/2011</span><span class="text-muted ml-4">hasta:</span><span class="small">Atual</span>
-                        </div>
-                    </div>
-
-                    <div class="my-3 trabajoPlantilla">
-                        <div class="ml-2">
-                            <span class="h4">Microsoft</span>
-                            <p>Jefe de Bill Gates</p>
-                            <span class="text-muted">desde:</span><span class="small">2/Ago/2008</span><span class="text-muted ml-4">hasta:</span><span class="small">30/Dic/2011</span>
-                        </div>
-                    </div>
-
-                    <div class="my-3 trabajoPlantilla">
-                        <div class="ml-2">
-                            <span class="h4">Apple</span>
-                            <p>EL que inspiraba a Steve Jobs</p>
-                            <span class="text-muted">desde:</span><span class="small">7/May/2006</span><span class="text-muted ml-4">hasta:</span><span class="small">1/Ago/2008</span>
-                        </div>
-                    </div>
-
-                </div>
+                }
             </div>
         </div>
     </div>
 </div>
-
 
