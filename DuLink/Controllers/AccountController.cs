@@ -13,7 +13,7 @@ namespace DuLink.Controllers
         public ActionResult Index()
         {
             AccountModel account = new AccountModel();
-            ViewBag.LISTA = account.findAll();
+            ViewBag.LISTA = account.FindAll();
             return View();
         }
     }

@@ -213,11 +213,15 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Entities\JobOffer.cs" />
+    <Compile Include="Entities\Jobs.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Entities\Account.cs" />
     <Compile Include="Models\AccountModel.cs" />
+    <Compile Include="Models\JobOfferModel.cs" />
+    <Compile Include="Models\JobsModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -256,6 +260,7 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\Account\Registro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

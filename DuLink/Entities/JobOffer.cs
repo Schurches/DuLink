@@ -48,27 +48,27 @@ namespace DuLink.Entities
             get;
             set;
         }
-        [BsonElement("JobPosition")]
+        [BsonElement("JobOfferPosition")]
         public String Position
         {
             get;
             set;
         }
-        [BsonElement("JobCompanyName")]
+        [BsonElement("JobOfferCompanyName")]
         public String CompanyName
         {
             get;
             set;
         }
-        [BsonElement("JobStartDate")]
-        public DateTime StartDate
+        [BsonElement("JobOfferStartDate")]
+        public String StartDate
         {
             get;
             set;
         }
 
-        [BsonElement("JobEndDate")]
-        public DateTime EndDate
+        [BsonElement("JobOfferEndDate")]
+        public String EndDate
         {
             get;
             set;

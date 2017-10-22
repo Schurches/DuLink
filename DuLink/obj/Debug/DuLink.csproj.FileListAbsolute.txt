@@ -214,3 +214,6 @@ D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\o
 D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\obj\Debug\DuLink.csproj.CoreCompileInputs.cache
 D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\obj\Debug\DuLink.dll
 D:\OneDrive\Universidad\Semestre VI\Bases de Datos\Laboratorio 2\DuLink\DuLink\obj\Debug\DuLink.pdb
+C:\Users\steven\Documents\GitHub\DuLink\DuLink\obj\Debug\DuLink.csprojResolveAssemblyReference.cache
+C:\Users\steven\Documents\GitHub\DuLink\DuLink\obj\Debug\DuLink.dll
+C:\Users\steven\Documents\GitHub\DuLink\DuLink\obj\Debug\DuLink.pdb

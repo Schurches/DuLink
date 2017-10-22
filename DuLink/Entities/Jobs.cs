@@ -42,14 +42,14 @@ namespace DuLink.Entities
             set;
         }
         [BsonElement("JobStartDate")]
-        public DateTime StartDate
+        public String StartDate
         {
             get;
             set;
         }
 
         [BsonElement("JobEndDate")]
-        public DateTime EndDate
+        public String EndDate
         {
             get;
             set;
