@@ -1,1 +1,98 @@
-﻿
+﻿@model DuLink.Entities.Account
+
+@using (Html.BeginForm("Registro","Account",FormMethod.Post)) 
+{
+    @Html.AntiForgeryToken()
+
+    <div class="row pt-4">
+
+        <div class="col-12">
+            <h3 class="lead">Join DuLink today and connect to your buddies!.</h3>
+        </div>
+
+        <div class="col-12">
+            <hr />
+            <h4>Registration</h4>
+        </div>
+
+        @if (Session["CurrentErrorMessage"] != null)
+        {
+          <div class="col-12">
+              <hr />
+              <p>@Session["CurrentErrorMessage"]</p>
+          </div>
+        }
+        <div class="col-lg-8 row">
+
+            <hr />
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>First Name</label>
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Last Name</label>
+                    @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Email</label>
+                    @Html.EditorFor(model => model.Mail, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Mail, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Username</label>
+                    @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Password</label>
+                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Career or field</label>
+                    @Html.EditorFor(model => model.Career, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Career, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Current semester</label>
+                    @Html.EditorFor(model => model.Semester, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Semester, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-primary my-2" />
+                </div>
+            </div>
+        </div>
+
+        </div>
+        }
+
+        <div>
+            @Html.ActionLink("Return to index", "Index")
+        </div>

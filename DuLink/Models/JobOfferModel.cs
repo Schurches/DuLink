@@ -37,28 +37,51 @@ namespace DuLink.Models
             jobOfferCollection.InsertOne(jobOffer);
         }
 
-        public List<JobOffer> FindAllByDescription(String descriptionKeyWords)
+        public List<JobOffer> FindAllByDescription(String keyWords)
         {
-            List<JobOffer> lista = jobOfferCollection.AsQueryable<JobOffer>().ToList();
             List<JobOffer> listaResult = new List<JobOffer>();
-            foreach (JobOffer i in lista)
+            if (keyWords.Trim() != "")
             {
-                if (i.Description.Contains(descriptionKeyWords))
+                List<JobOffer> lista = jobOfferCollection.AsQueryable<JobOffer>().ToList();
+                String[] keys = keyWords.Replace(' ', ';').Split(';');
+                foreach (JobOffer i in lista)
                 {
-                    listaResult.Add(i);
+                    foreach (String j in keys)
+                    {
+                        if (j != "")
+                        {
+                            if (i.Description.Contains(keyWords))
+                            {
+                                listaResult.Add(i);
+                            }
+                        }
+                    }
+
                 }
             }
+ 
             return listaResult;
         }
-        public List<JobOffer> FindAllByCompanyName(String companyNameKeyWords)
+        public List<JobOffer> FindAllByCompanyName(String keyWords)
         {
-            List<JobOffer> lista = jobOfferCollection.AsQueryable<JobOffer>().ToList();
             List<JobOffer> listaResult = new List<JobOffer>();
-            foreach (JobOffer i in lista)
+            if (keyWords.Trim() != "")
             {
-                if (i.CompanyName.Contains(companyNameKeyWords))
+                List<JobOffer> lista = jobOfferCollection.AsQueryable<JobOffer>().ToList();
+                String[] keys = keyWords.Replace(' ', ';').Split(';');
+                foreach (JobOffer i in lista)
                 {
-                    listaResult.Add(i);
+                    foreach (String j in keys)
+                    {
+                        if (j != "")
+                        {
+                            if (i.CompanyName.Contains(keyWords))
+                            {
+                                listaResult.Add(i);
+                            }
+                        }
+                    }
+
                 }
             }
             return listaResult;
