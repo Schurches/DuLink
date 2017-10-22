@@ -8,18 +8,9 @@
         <div class="row justify-content-center rounded" style="min-width:281px;background-color:white;border:1px solid #ccc">
 
             <div class="col-12 mt-1">
-                <div class="my-2">
-<<<<<<< HEAD
-                    <span class="card-title h2">Jondoe</span>
-                </div>
                 <div class="img-thumbnail" style="overflow:hidden">
                     <img src="~/Content/as.jpg" alt="Imagen del perfil" style="max-height:240px;min-height:230px" />
-=======
                     <span class="card-title h2">@Session["Username"]</span>
-                </div>
-                <div class="img-thumbnail" style="overflow:hidden">
-                    <img src="~/Content/andre.jpg" alt="Profile Pic" style="max-height:240px;min-height:230px" />
->>>>>>> 0ccc9611c8d28d1c7bca13fbe6e2a712b4fcbc2e
                 </div>
             </div>
 
@@ -34,26 +25,6 @@
             <!-- Profile information-->
             <div class="mt-2 col-12">
                 <div class="py-2 my-1 trabajoPlantilla">
-<<<<<<< HEAD
-                    <span class="text-muted mr-2">Nombre:</span>
-                    <span id="name">Andrea</span>
-                </div>
-                <div class="py-2 my-1 trabajoPlantilla">
-                    <span class="text-muted mr-2">Apellido:</span>
-                    <span id="lastName">Anaya</span>
-                </div>
-                <div class="py-2 my-1 trabajoPlantilla">
-                    <span class="text-muted mr-2">Email:</span>
-                    <span id="email">andrea@loca.com</span>
-                </div>
-                <div class="py-2 my-1 trabajoPlantilla">
-                    <span class="text-muted mr-2">Carrera:</span>
-                    <span id="carrer">Economía</span>
-                </div>
-                <div class="py-2 my-1 trabajoPlantilla">
-                    <span class="text-muted mr-2">Semestre:</span>
-                    <span id="semester">4</span>
-=======
                     <span class="text-muted mr-2">Name:</span>
                     <span id="name">@Session["Name"]</span>
                 </div>
@@ -72,7 +43,6 @@
                 <div class="py-2 my-1 trabajoPlantilla">
                     <span class="text-muted mr-2">Semester:</span>
                     <span id="semester">@Session["Semester"]</span>
->>>>>>> 0ccc9611c8d28d1c7bca13fbe6e2a712b4fcbc2e
                 </div>
             </div>
         </div>
@@ -88,12 +58,11 @@
                 <div>
                     <hr class="my-0" />
                 </div>
-                @using (Html.BeginForm("AddJob", "Perfil", FormMethod.Post))
-                {
-                    @Html.AntiForgeryToken()
                     <div class="col-12 my-3">
                         <h5>Add a new job</h5>
-                        <form class="form-group row">
+                        @using (Html.BeginForm("AddJob", "Perfil", FormMethod.Post, new { @class= "form-group row" }))
+                        {
+                            @Html.AntiForgeryToken()
                             <div class="col-md-6">
                                 <label>Company</label>
                                 @Html.EditorFor(model => model.CompanyName, new { htmlAttributes = new { @class = "form-control" } })
@@ -117,9 +86,12 @@
                             <div class="col-12 my-2">
                                 <button class="btn btn-outline-dark" type="submit">Add</button>
                             </div>
-                        </form>
+                         }
                     </div>
-                }
+                    <div class="col-12">
+                        <h4>Jobs</h4>
+                        <hr class="my-0" />
+                    </div>
                 @if (ViewBag.Jobs != null)
                 {
                     <div style="height:340px;overflow:scroll">
@@ -143,6 +115,11 @@
                             </div>
                         })
 
+                    </div>
+                }
+                else {
+                    <div class="col-12">
+                        <h6>There is not Jobs added</h6>
                     </div>
                 }
             </div>
