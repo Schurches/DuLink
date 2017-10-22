@@ -21,7 +21,7 @@ namespace DuLink.Controllers
 
 
         /*****************************************/
-        /*****************LOGIN****************/
+        /*****************LOGIN*******************/
         /*****************************************/
 
         [HttpGet]
@@ -38,7 +38,7 @@ namespace DuLink.Controllers
             if (loginMatches(currentUser))
             {
                 Session["CurrentErrorMessage"] = null;
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Home");
             }
             return View();
         }
@@ -65,6 +65,18 @@ namespace DuLink.Controllers
             Session["CurrentErrorMessage"] = "No user was found with username: " + loggedUser.UserName;
             return false;
         }
+
+
+        /*****************************************/
+        /*****************LOG OUT*****************/
+        /*****************************************/
+
+        public ActionResult LogOut()
+        {
+            Session["Username"] = null;
+            return RedirectToAction("Index", "Home");
+        }
+        
 
         /*****************************************/
         /*****************REGISTRO****************/

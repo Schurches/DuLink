@@ -1,13 +1,13 @@
 ﻿@using Microsoft.AspNet.Identity
-@if (Session["UserID"] != null)
+@if (Session["Username"] != null)
 {
     <div class="navbar-nav mr-auto col-sm-12 col-md-3 justify-content-end">
-        <a href="@Url.Action("APUser", "APUser")" class="nav-item nav-link">@Session["Username"]</a>
-        <a href="@Url.Action("Salir", "SignIn")" class="nav-item nav-link">Log out</a>
+        <a href="@Url.Action("Index", "Perfil")" class="nav-item nav-link">@Session["Username"]</a>
+        <a href="@Url.Action("LogOut", "Account")" class="nav-item nav-link">Log out</a>
     </div>
 }else{
     <div class="navbar-nav">
         <a href = "@Url.Action("Login", "Account")" class="nav-item nav-link" id="loginLink">Log In</a>
-        <a href = "@Url.Action("Register", "Account")" class="nav-item nav-link" id="registerLink">Register</a>
+        <a href = "@Url.Action("Registro", "Account")" class="nav-item nav-link" id="registerLink">Sign Up</a>
     </div>
 }

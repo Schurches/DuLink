@@ -271,6 +271,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Perfil\Index.cshtml" />
     <Content Include="Views\JobOffer\PostOffer.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
