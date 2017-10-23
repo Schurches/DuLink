@@ -16,5 +16,24 @@
 .babo{
     background-color:#f6f6f6;
 }
+.contacto {
+    border-left: 2px solid #00ff21;
+    text-decoration: none;
+    background-color: white
+}
+.imgContacto {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%
+}
+.contactos a{
+    text-decoration:none;
+    color:black;
+}
+.contacto:hover {
+    color: black;
+    border-left: 2px solid #0077B5;
+}
+
 
 /*# sourceMappingURL=bootstrap.min.css.map */
