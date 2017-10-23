@@ -37,7 +37,7 @@ namespace DuLink.Controllers
             
             if (loginMatches(currentUser))
             {
-                Session["CurrentErrorMessage"] = null;
+                Session["LoginErrorMessage"] = null;
                 return RedirectToAction("Index","Home");
             }
             return View();
@@ -59,18 +59,16 @@ namespace DuLink.Controllers
                         Session["Career"] = user.Career;
                         Session["Semester"] = user.Semester;
                         Session["Username"] = loggedUser.UserName;
-                        ViewBag.Jobs = user.JobsList;
-                        ViewBag.Friends = user.FriendsList;
                         return true;
                     }
                     else
                     {
-                        Session["CurrentErrorMessage"] = "Password for this user is incorrect!";
+                        Session["LoginErrorMessage"] = "Password for this user is incorrect!";
                         return false;
                     }
                 }
             }
-            Session["CurrentErrorMessage"] = "No user was found with username: " + loggedUser.UserName;
+            Session["LoginErrorMessage"] = "No user was found with username: " + loggedUser.UserName;
             return false;
         }
 
@@ -111,8 +109,11 @@ namespace DuLink.Controllers
             {
                 if (isUserAllowed(nuevoUser))
                 {
+                    nuevoUser.FriendsList = new List<String>();
+                    nuevoUser.JobsList = new List<String>();
                     accountModel.CreateAccount(nuevoUser);
-                    Session["CurrentErrorMessage"] = "Registration Successful, now log in!";
+                    Session["LoginErrorMessage"] = "Registration Successful, now log in!";
+                    Session["CurrentErrorMessage"] = null;
                     return RedirectToAction("Login");
                 }
                 else

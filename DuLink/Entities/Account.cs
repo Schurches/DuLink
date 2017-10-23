@@ -28,7 +28,7 @@ namespace DuLink.Entities
         }
         [BsonElement("EmployeeLastName")]
         [Required(ErrorMessage = "This field is required!", AllowEmptyStrings = false)]
-        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "This field must only contain letters")]
+        [RegularExpression(@"^[a-zA-Z\s]+$", ErrorMessage = "This field must only contain letters")]
         [StringLength(50, ErrorMessage = "Last name field must not exceed {1} characters or be less than {2}", MinimumLength = 4)]
         public String LastName
         {
