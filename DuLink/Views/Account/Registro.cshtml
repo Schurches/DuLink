@@ -9,15 +9,13 @@
             <hr />
             <h4>Registration</h4>
         </div>
-        <!--Aqui no es necesario
-       if (Session["CurrentErrorMessage"] != null)
+        @if (Session["CurrentErrorMessage"] != null)
         {
             <div class="col-12">
                 <hr />
-                <p>Session["CurrentErrorMessage"]</p>
+                <p>@Session["CurrentErrorMessage"]</p>
             </div>
         }
-        -->
 
         <div class="col-lg-8">
             <hr />

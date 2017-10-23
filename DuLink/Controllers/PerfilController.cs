@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using DuLink.Models;
 
 namespace DuLink.Controllers
 {
@@ -16,6 +15,8 @@ namespace DuLink.Controllers
         // GET: Perfil
         public ActionResult Index()
         {
+            Account currentUser = accountModel.FindAccount(Session["ID"].ToString());
+            getUserJobsList(currentUser);
             return View();
         }
 
@@ -27,18 +28,27 @@ namespace DuLink.Controllers
             /*************************************************************************************************/
             if (ModelState.IsValid)
             {
-                // = findUser();
                 newJob.EmployeeId = Session["ID"].ToString();
                 newJob.Name = newJob.Position;
+                Jobs lastJob = jobModel.FindAll().Last();
                 jobModel.CreateJobs(newJob);
+                Account currentUser = accountModel.FindAccount(Session["ID"].ToString());
+                accountModel.addJobToUser(jobModel.getLastAddedJob().Id.ToString(),currentUser,lastJob);
+                getUserJobsList(currentUser);
             }
             return RedirectToAction("Index");
         }
-
-        public Account findUser()
-        {
-            return accountModel.FindAccount(Session["ID"].ToString());
-        }
         
+        public void getUserJobsList(Account currentUser)
+        {
+            List<Jobs> allJobs = new List<Jobs>();
+            foreach (var job in currentUser.JobsList)
+            {
+                allJobs.Add(jobModel.FindJobs(job));
+            }
+            ViewBag.Jobs = allJobs;
+            ViewBag.JobCount = allJobs.Count;
+        }
+
     }
 }

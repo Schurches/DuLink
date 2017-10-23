@@ -37,5 +37,17 @@ namespace DuLink.Models
             jobsCollection.InsertOne(job);
         }
 
+        public Jobs getLastAddedJob()
+        {
+            return jobsCollection.AsQueryable<Jobs>().ToList().Last();
+        }
+
+        //Fijense si pueden solucionar esto
+        public void updateJob(String jobID, String endDate)
+        {
+            jobsCollection.UpdateOne(Builders<Jobs>.Filter.Eq("Id", jobID),
+                Builders<Jobs>.Update.Set("JobEndDate", endDate));
+        }
+
     }
 }

@@ -88,13 +88,20 @@ namespace DuLink.Models
             accountCollection.InsertOne(account);
         }
 
-        public void addJobToUser(Account account)
+        public void addJobToUser(String jobID, Account user, Jobs lastJob)
         {
-            var filter = Builders<BsonDocument>.Filter.Eq("Name", account.Name);
-            //var update = Builders<BsonDocument>.Update.Set("JobList", "American (New)").CurrentDate("lastModified");
-            //accountCollection.UpdateOne(filter,account);
-            //var result = await collection.UpdateOneAsync(filter, update);
-            
+            if (user.JobsList.Count != 0)
+            {
+                JobsModel jobModel = new JobsModel();
+                if (lastJob.EndDate == null)
+                {
+                    lastJob.EndDate = jobModel.FindAll().Last().StartDate;
+                    jobModel.updateJob(lastJob.Id.ToString(), lastJob.EndDate.ToString());
+                }
+            }
+            user.JobsList.Add(jobID);
+            accountCollection.UpdateOne(Builders<Account>.Filter.Eq("Id", user.Id),
+                Builders<Account>.Update.Set("EmployeeJobs", user.JobsList));
         }
 
    

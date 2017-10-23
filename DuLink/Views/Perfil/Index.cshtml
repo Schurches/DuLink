@@ -92,7 +92,7 @@
                         <h4>Jobs</h4>
                         <hr class="my-0" />
                     </div>
-                @if (ViewBag.Jobs != null)
+                @if (ViewBag.JobCount != 0)
                 {
                     <div style="height:340px;overflow:scroll">
                         <!--Job records-->
@@ -105,7 +105,7 @@
                                     <span class="text-muted">Since:</span><span class="small">@job.StartDate</span>
                                     @if (job.EndDate != null)
                                     {
-                                        <span class="text-muted ml-4">Until:</span><span class="small">job.EndDate</span>
+                                        <span class="text-muted ml-4">Until:</span><span class="small">@job.EndDate</span>
                                     }
                                     else
                                     {
@@ -113,7 +113,7 @@
                                     }
                                 </div>
                             </div>
-                        })
+                        }
 
                     </div>
                 }
