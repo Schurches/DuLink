@@ -2,7 +2,7 @@
 @if (Session["Username"] != null)
 {
     <div class="navbar-nav">
-        <a href="@Url.Action("Index", "Perfil")" class="nav-item nav-link">@Session["Username"]</a>
+        <a href="@Url.Action("Index", "Perfil", new { userID = Session["ID"].ToString() })" class="nav-item nav-link">@Session["Username"]</a>
         <a href="@Url.Action("LogOut", "Account")" class="nav-item nav-link">Log out</a>
     </div>
 }else{

@@ -13,10 +13,29 @@ namespace DuLink.Controllers
         AccountModel accountModel = new AccountModel();
         JobsModel jobModel = new JobsModel();
         // GET: Perfil
-        public ActionResult Index()
+
+        
+
+        [HttpGet]
+        public ActionResult Index(String userID)
         {
-            Account currentUser = accountModel.FindAccount(Session["ID"].ToString());
-            getUserJobsList(currentUser);
+            if (Session["ID"] != null)
+            {
+                Account currentUser = accountModel.FindAccount(userID);
+                getUserJobsList(currentUser);
+                getUserFriendsList(currentUser);
+                ViewBag.ProfileUsername = currentUser.UserName;
+                ViewBag.ProfileName = currentUser.Name;
+                ViewBag.ProfileLastname = currentUser.LastName;
+                ViewBag.ProfileCareer = currentUser.Career;
+                ViewBag.ProfileSemester = currentUser.Semester;
+                ViewBag.ProfileEmail = currentUser.Mail;
+                ViewBag.ProfileID = userID;
+            }
+            else
+            {
+                return RedirectToAction("Login","Account");
+            }
             return View();
         }
 
@@ -48,6 +67,17 @@ namespace DuLink.Controllers
             }
             ViewBag.Jobs = allJobs;
             ViewBag.JobCount = allJobs.Count;
+        }
+
+        public void getUserFriendsList(Account currentUser)
+        {
+            List<Account> allFriends = new List<Account>();
+            foreach (var friend in currentUser.FriendsList)
+            {
+                allFriends.Add(accountModel.FindAccount(friend));
+            }
+            ViewBag.FriendsCount = allFriends.Count;
+            ViewBag.FriendsList = allFriends;
         }
 
     }
