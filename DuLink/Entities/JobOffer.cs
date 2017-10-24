@@ -81,22 +81,6 @@ namespace DuLink.Entities
             get;
             set;
         }
-        [BsonElement("JobOfferStartDate")]
-        [Required(ErrorMessage = "This field is required!", AllowEmptyStrings = false)]
-        [DataType(DataType.Date)]
-        public String StartDate
-        {
-            get;
-            set;
-        }
 
-        [BsonElement("JobOfferEndDate")]
-        [Required(ErrorMessage = "This field is required!", AllowEmptyStrings = false)]
-        [DataType(DataType.Date)]
-        public String EndDate
-        {
-            get;
-            set;
-        }
     }
 }
