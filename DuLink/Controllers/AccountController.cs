@@ -38,7 +38,7 @@ namespace DuLink.Controllers
             if (loginMatches(currentUser))
             {
                 Session["LoginErrorMessage"] = null;
-                return RedirectToAction("Index","Home");
+                return RedirectToAction("Home","JobOffer");
             }
             return View();
         }
@@ -78,7 +78,7 @@ namespace DuLink.Controllers
             Session["Username"] = null;
             ViewBag.Jobs = null;
             ViewBag.Friends = null;
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Login", "Account");
         }
         
 

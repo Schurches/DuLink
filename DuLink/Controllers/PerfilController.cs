@@ -55,7 +55,7 @@ namespace DuLink.Controllers
                 accountModel.addJobToUser(jobModel.getLastAddedJob().Id.ToString(),currentUser,lastJob);
                 getUserJobsList(currentUser);
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", new {userID = Session["ID"].ToString()});
         }
         
         public void getUserJobsList(Account currentUser)

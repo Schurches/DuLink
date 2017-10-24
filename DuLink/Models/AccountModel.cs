@@ -25,53 +25,132 @@ namespace DuLink.Models
             return accountCollection.AsQueryable<Account>().ToList();
         }
 
-        public List<Account> FindAllByCareer(String CareerKeyWords)
+        public List<Account> FindAllByCareer(String keyWords)
         {
-            List<Account> lista = accountCollection.AsQueryable<Account>().ToList();
             List<Account> listaResult = new List<Account>();
-            foreach (Account i in lista)
+            if (keyWords.Trim() != "")
             {
-                if (i.Career.Contains(CareerKeyWords)) {
-                    listaResult.Add(i);
+                List<Account> lista = accountCollection.AsQueryable<Account>().ToList();
+                String[] keys = keyWords.Replace(' ', ';').Split(';');
+                foreach (Account i in lista)
+                {
+                    foreach (String j in keys)
+                    {
+                        if (j != "")
+                        {
+                            if (i.Career.Contains(keyWords))
+                            {
+                                listaResult.Add(i);
+                            }
+                        }
+                    }
+
                 }
             }
             return listaResult;
         }
-        public List<Account> FindAllBySemester(String semesterKeyWords)
+        public List<Account> FindAllBySemester(String keyWords)
         {
-            List<Account> lista = accountCollection.AsQueryable<Account>().ToList();
             List<Account> listaResult = new List<Account>();
-            foreach (Account i in lista)
+            if (keyWords.Trim() != "")
             {
-                if (i.Semester.Contains(semesterKeyWords))
+                List<Account> lista = accountCollection.AsQueryable<Account>().ToList();
+                String[] keys = keyWords.Replace(' ', ';').Split(';');
+                foreach (Account i in lista)
                 {
-                    listaResult.Add(i);
+                    foreach (String j in keys)
+                    {
+                        if (j != "")
+                        {
+                            if (i.Semester.Contains(keyWords))
+                            {
+                                listaResult.Add(i);
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            return listaResult;
+        }
+        public List<Account> FindAllByName(String keyWords)
+        {
+            List<Account> listaResult = new List<Account>();
+            if (keyWords.Trim() != "")
+            {
+                List<Account> lista = accountCollection.AsQueryable<Account>().ToList();
+                String[] keys = keyWords.Replace(' ', ';').Split(';');
+                foreach (Account i in lista)
+                {
+                    foreach (String j in keys)
+                    {
+                        if (j != "")
+                        {
+                            if (i.Name.Contains(keyWords))
+                            {
+                                listaResult.Add(i);
+                            }
+                        }
+                    }
+
                 }
             }
             return listaResult;
         }
-        public List<Account> FindAllByName(String nameKeyWords)
+        public List<Account> FindAllByLastName(String keyWords)
         {
-            List<Account> lista = accountCollection.AsQueryable<Account>().ToList();
             List<Account> listaResult = new List<Account>();
-            foreach (Account i in lista)
+            if (keyWords.Trim() != "")
             {
-                if (i.Name.Contains(nameKeyWords))
+                List<Account> lista = accountCollection.AsQueryable<Account>().ToList();
+                String[] keys = keyWords.Replace(' ', ';').Split(';');
+                foreach (Account i in lista)
                 {
-                    listaResult.Add(i);
+                    foreach (String j in keys)
+                    {
+                        if (j != "")
+                        {
+                            if (i.LastName.Contains(keyWords))
+                            {
+                                listaResult.Add(i);
+                            }
+                        }
+                    }
+
                 }
             }
             return listaResult;
         }
-        public List<Account> FindAllByLastName(String lastNameKeyWords)
+        public List<Account> FindSuggestedFriends(Account mainAccount)
         {
-            List<Account> lista = accountCollection.AsQueryable<Account>().ToList();
             List<Account> listaResult = new List<Account>();
-            foreach (Account i in lista)
+            foreach (String idF in mainAccount.FriendsList)
             {
-                if (i.LastName.Contains(lastNameKeyWords))
+                Account userF = FindAccount(idF);
+                foreach (String idFF in userF.FriendsList)
                 {
-                    listaResult.Add(i);
+                    if (ObjectId.Parse(idFF) != mainAccount.Id)
+                    {
+                        Account userFF = FindAccount(idFF);
+                        foreach (String idFFF in userFF.FriendsList)
+                        {
+                            if (ObjectId.Parse(idFFF) != mainAccount.Id)
+                            {
+                                bool Add = true;
+                                foreach (String a in mainAccount.FriendsList)
+                                {
+                                    if(a.Equals(idFFF))                                    {
+                                        Add = false;
+                                    }
+                                }
+                                if (Add) {
+                                    listaResult.Add(FindAccount(idFFF));
+                                }                     
+                            }
+                        }
+                    }
+
                 }
             }
             return listaResult;
@@ -104,6 +183,6 @@ namespace DuLink.Models
                 Builders<Account>.Update.Set("EmployeeJobs", user.JobsList));
         }
 
-   
+
     }
 }
