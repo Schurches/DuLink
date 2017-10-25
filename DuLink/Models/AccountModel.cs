@@ -140,7 +140,7 @@ namespace DuLink.Models
                                 bool Add = true;
                                 foreach (String a in mainAccount.FriendsList)
                                 {
-                                    if(a.Equals(idFFF))                                    {
+                                    if(a.Equals(idFFF)){
                                         Add = false;
                                     }
                                 }
@@ -162,6 +162,11 @@ namespace DuLink.Models
             return accountCollection.AsQueryable<Account>().SingleOrDefault(a => a.Id == accountId);
         }
 
+        public Account FindAccountByName(String username)
+        {
+            return accountCollection.AsQueryable<Account>().SingleOrDefault(a => a.UserName == username);
+        }
+
         public void CreateAccount(Account account)
         {
             accountCollection.InsertOne(account);
@@ -181,6 +186,13 @@ namespace DuLink.Models
             user.JobsList.Add(jobID);
             accountCollection.UpdateOne(Builders<Account>.Filter.Eq("Id", user.Id),
                 Builders<Account>.Update.Set("EmployeeJobs", user.JobsList));
+        }
+
+        public void addFriend(String theFriend, Account currentUser)
+        {
+            currentUser.FriendsList.Add(theFriend);
+            accountCollection.UpdateOne(Builders<Account>.Filter.Eq("Id", currentUser.Id),
+                Builders<Account>.Update.Set("EmployeeFriends", currentUser.FriendsList));
         }
 
 
