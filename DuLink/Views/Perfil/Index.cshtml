@@ -9,8 +9,14 @@
 
             <div class="col-12 mt-1">
                 <div class="img-thumbnail" style="overflow:hidden">
+                    <h2 class="card-title">@ViewBag.Profile.UserName</h2>
                     <img src="~/Content/Perfil.png" alt="Imagen del perfil" style="max-height:240px;min-height:230px" />
-                    <h2 class="card-title">@ViewBag.ProfileUsername</h2>
+                    @if (ViewBag.isFriend == false)
+                    {
+                        <a href="@Url.Action("addFriend", "Perfil", new { username = ViewBag.Profile.UserName })">
+                            <button class="btn btn-primary">Follow</button>
+                        </a>
+                    }
                 </div>
             </div>
 
@@ -26,23 +32,23 @@
             <div class="mt-2 col-12">
                 <div class="py-2 my-1 trabajoPlantilla">
                     <span class="text-muted mr-2">Name:</span>
-                    <span id="name">@ViewBag.ProfileName</span>
+                    <span id="name">@ViewBag.Profile.Name</span>
                 </div>
                 <div class="py-2 my-1 trabajoPlantilla">
                     <span class="text-muted mr-2">Last Name:</span>
-                    <span id="lastName">@ViewBag.ProfileLastname</span>
+                    <span id="lastName">@ViewBag.Profile.LastName</span>
                 </div>
                 <div class="py-2 my-1 trabajoPlantilla">
                     <span class="text-muted mr-2">Email:</span>
-                    <span id="email">@ViewBag.ProfileEmail</span>
+                    <span id="email">@ViewBag.Profile.Mail</span>
                 </div>
                 <div class="py-2 my-1 trabajoPlantilla">
                     <span class="text-muted mr-2">Career:</span>
-                    <span id="carrer">@ViewBag.ProfileCareer</span>
+                    <span id="carrer">@ViewBag.Profile.Career</span>
                 </div>
                 <div class="py-2 my-1 trabajoPlantilla">
                     <span class="text-muted mr-2">Semester:</span>
-                    <span id="semester">@ViewBag.ProfileSemester</span>
+                    <span id="semester">@ViewBag.Profile.Semester</span>
                 </div>
             </div>
         </div>
@@ -62,8 +68,7 @@
                 {
                     <div class="col-12 my-3">
                         <h5>Add a new job</h5>
-                        @using (Html.BeginForm("AddJob", "Perfil", FormMethod.Post, new { @class = "form-group row" }))
-                        {
+                        <form action="/Perfil/AddJob" method="post" class="form-group row">
                             @Html.AntiForgeryToken()
                             <div class="col-md-6">
                                 <label>Company</label>
@@ -88,7 +93,7 @@
                             <div class="col-12 my-2">
                                 <button class="btn btn-outline-dark" type="submit">Add</button>
                             </div>
-                        }
+                        </form>
                     </div>
                 }
                 @if (ViewBag.JobCount != 0)
@@ -148,8 +153,7 @@
                 foreach (var friend in ViewBag.FriendsList)
                 {
                     <div class="col-12 mt-1">
-                            
-                        <a href="@Url.Action("Index", "Perfil", new { userID = friend.Id})" class="col-12 my-1 contacto">
+                        <a href="@Url.Action("Index", "Perfil", new { userID = friend.Id })" class="col-12 my-1 contacto">
                             <img src="~/Content/Perfil.png" alt="Alternate Text" style="width:50px;height:50px;border-radius:100%" />
                             <span>@friend.Name</span>
                         </a>
@@ -161,12 +165,5 @@
                 <h4 class="card-title">No friends to display</h4>
             }
         </div>
-            <!--<div class="img-thumbnail" style="overflow:hidden">
-                                <img src="~/Content/manc.png" alt="Imagen del perfil" style="max-height:60px;min-height:60px" />
-                                <a href="Url.Action("Index", "Perfil", new { userID = friend.Id})">
-                                    <span class="card-title h2">friend.Name</span>
-                                </a>
-                            </div>-->
     </div>
 </div>
-

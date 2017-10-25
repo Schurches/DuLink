@@ -45,7 +45,8 @@ namespace DuLink.Models
         //Fijense si pueden solucionar esto
         public void updateJob(String jobID, String endDate)
         {
-            jobsCollection.UpdateOne(Builders<Jobs>.Filter.Eq("Id", jobID),
+            Jobs jobToUpdate = FindJobs(jobID);
+            jobsCollection.UpdateOne(Builders<Jobs>.Filter.Eq("Id", jobToUpdate.Id),
                 Builders<Jobs>.Update.Set("JobEndDate", endDate));
         }
 
