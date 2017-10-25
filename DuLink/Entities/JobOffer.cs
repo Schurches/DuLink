@@ -19,8 +19,6 @@ namespace DuLink.Entities
 
         [BsonElement("JobOfferName")]
         [Required(ErrorMessage = "This field is required!", AllowEmptyStrings = false)]
-        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "This field must only contain letters")]
-        [StringLength(15, ErrorMessage = "Name must not exceed {1} characters or be less than {2}", MinimumLength = 4)]
         public String Name
         {
             get;
@@ -37,8 +35,6 @@ namespace DuLink.Entities
         }
         [BsonElement("JobOfferDescription")]
         [Required(ErrorMessage = "This field is required!", AllowEmptyStrings = false)]
-        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "This field must only contain letters")]
-        [StringLength(40, ErrorMessage = "Name must not exceed {1} characters or be less than {2}", MinimumLength = 15)]
         public String Description
         {
             get;
@@ -47,8 +43,6 @@ namespace DuLink.Entities
         }
         [BsonElement("JobOfferContact")]
         [Required(ErrorMessage = "This field is required!", AllowEmptyStrings = false)]
-        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "This field must only contain letters")]
-        [StringLength(15, ErrorMessage = "Name must not exceed {1} characters or be less than {2}", MinimumLength = 4)]
         public String Contact
         {
             get;
@@ -56,8 +50,6 @@ namespace DuLink.Entities
         }
         [BsonElement("JobOfferContactPhoneNumber")]
         [Required(ErrorMessage = "This field is required!", AllowEmptyStrings = false)]
-        [RegularExpression(@"^[0-9]+$", ErrorMessage = "This field must only contain numbers")]
-        [StringLength(10, ErrorMessage = "Name must not exceed {1}")]
         public String ContactPhoneNumber
         {
             get;
@@ -65,8 +57,6 @@ namespace DuLink.Entities
         }
         [BsonElement("JobOfferPosition")]
         [Required(ErrorMessage = "This field is required!", AllowEmptyStrings = false)]
-        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "This field must only contain letters")]
-        [StringLength(15, ErrorMessage = "Name must not exceed {1} characters or be less than {2}", MinimumLength = 4)]
         public String Position
         {
             get;
@@ -74,8 +64,6 @@ namespace DuLink.Entities
         }
         [BsonElement("JobOfferCompanyName")]
         [Required(ErrorMessage = "This field is required!", AllowEmptyStrings = false)]
-        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "This field must only contain letters")]
-        [StringLength(15, ErrorMessage = "Name must not exceed {1} characters or be less than {2}", MinimumLength = 4)]
         public String CompanyName
         {
             get;
@@ -84,8 +72,6 @@ namespace DuLink.Entities
 
         [BsonElement("JobOfferCareer")]
         [Required(ErrorMessage = "This field is required!", AllowEmptyStrings = false)]
-        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "This field must only contain letters")]
-        [StringLength(20, ErrorMessage = "Name must not exceed {1} characters or be less than {2}", MinimumLength = 4)]
         public String Career
         {
             get;

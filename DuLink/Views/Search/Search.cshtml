@@ -3,65 +3,97 @@
 
 <div class="container marginTopContent pt-5">
     <div class="row">
+        <div class="col-sm-12 col-md-3 col-lg-3">
+            <div class="row text-center">
+                <h6 class="display-4" runat="server">By Users</h6>
+            </div>
+            <div class="col-12">
+                <hr />
+            </div>
+            <div class="col-lg-2">
+                <a href="@Url.Action("SearchType", "Search", new { UserSearch = "Name", OfferSearch="None" })">Name</a>
+                <a href="@Url.Action("SearchType", "Search", new { UserSearch = "LastName", OfferSearch="None" })">Last name</a>
+                <a href="@Url.Action("SearchType", "Search", new { UserSearch = "Career", OfferSearch="None" })">Career</a>
+                <a href="@Url.Action("SearchType", "Search", new { UserSearch = "Semester", OfferSearch="None" })">Semester</a>
+            </div>
+            <div class="row text-center">
+                <h6 class="display-4" runat="server">By offer</h6>
+            </div>
+            <div class="col-12">
+                <hr />
+            </div> 
+            <div class="col-lg-1">
+                <a href="@Url.Action("SearchType", "Search", new { UserSearch = "None", OfferSearch="CompanyName" })">Company name</a>
+                <a href="@Url.Action("SearchType", "Search", new { UserSearch = "None",  OfferSearch="Description" })">Description</a>
+            </div>
+        </div>
           <div class="col-sm-12 col-md-9 col-lg-9 justify-content-center">
             <div class="col-12">
-                <span class="display-4" runat="server">Search</span>
+                @if (Session["BusquedaKeyWords"] != null)
+                {
+                    <span class="display-4" runat="server">Search of @Session["BusquedaKeyWords"]</span>
+                }
+                else
+                {
+                    <span class="display-4" runat="server">Search</span>
+                }
             </div>
             <div class="col-12">
                 <hr />
             </div>
             <div class="card-deck" runat="server">
              
-            <div class="col-12">
-                  <span class="display-4" runat="server">@ViewBag.TitleSearch</span>
-            </div>
-            <div>
-                  <hr class="my-0" />
-            </div>
-                @if (ViewBag.UsersList != null)
+                @if (Session["UsersList"]  != null)
                 {
                         <div class="col-12">
-                            <h6>@ViewBag.TitleSearchUser</h6>
+                            <h6>@Session["TitleSearchUser"]</h6>
                         </div>
                         <div class="col-12">
                             <hr />
                         </div>
-                        foreach (var friend in ViewBag.UsersList)
-                        {
+                    var list= Session["UsersList"] as List<DuLink.Entities.Account>;
+                    foreach (var friend in list)
+                    {
                             <div class="col-12 mt-1"> 
                                 <a href="@Url.Action("Index", "Perfil", new { userID = friend.Id })" class="col-12 my-1 contacto">
                                     <img src="~/Content/Perfil.png" alt="Alternate Text" style="width:50px;height:50px;border-radius:100%" />
                                     <span>@friend.Name</span>
                                 </a>
                             </div>
-                        }
+                    }
                  }
              
-                @if (ViewBag.OfferList != null)
+                @if (Session["OfferList"] != null)
                 {
                     <div class="col-12">
-                        <h6>@ViewBag.TitleSearchOffer</h6>
+                        <h6>@Session["TitleSearchOffer"]</h6>
                     </div>
                         <div class="col-12">
                             <hr />
                         </div>
                         <div class="col-12">
-                            @foreach (var Offer in ViewBag.OfferList)
-                            {
-                                <div class="row" style="border-radius:3px;border:1px solid #ccc">
-                                    <div class="col-12" style="border-bottom:1px solid #ccc">
-                                        <img src="~/Content/Job.png" alt="Alternate Text" style="width:50px;height:50px;border-radius:100%" />
-                                        <span>@Offer.Name</span>
+                            @{ 
+                                var list = Session["OfferList"] as List<DuLink.Entities.JobOffer>;
+                                foreach (var Offer in list)
+                                {
+                                    <div class="row" style="border-radius:3px;border:1px solid #ccc">
+                                        <div class="col-12" style="border-bottom:1px solid #ccc">
+                                            <img src="~/Content/Job.png" alt="Alternate Text" style="width:50px;height:50px;border-radius:100%" />
+                                            <span>@Offer.Name</span>
+                                        </div>
+                                        <div class="col-12 my-2">
+                                            <h6>Oferta laboral de @Offer.CompanyName</h6>
+                                            <p>
+                                                Se necesita persona para el cargo de @Offer.Position con un salario estimado de @Offer.Salary
+                                            </p>
+                                            <p>
+                                                Descripción: @Offer.Description
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div class="col-12 my-2">
-                                        <h6>Oferta laboral de @Offer.CompanyName</h6>
-                                        <p>
-                                            @Offer.Description
-                                        </p>
-                                    </div>
-                                </div>
-                            }
-                        </div>
+                                }
+                             }
+                         </div>
                 }
 
 

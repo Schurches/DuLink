@@ -144,8 +144,17 @@ namespace DuLink.Models
                                         Add = false;
                                     }
                                 }
+                                Account newSug = FindAccount(idFFF);
+                                foreach (Account a in listaResult)
+                                {
+                                    if (a.Id.Equals(newSug.Id))
+                                    {
+                                        Add = false;
+                                    }
+                                }
+                                
                                 if (Add) {
-                                    listaResult.Add(FindAccount(idFFF));
+                                    listaResult.Add(newSug);
                                 }                     
                             }
                         }

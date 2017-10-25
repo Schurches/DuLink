@@ -14,44 +14,54 @@ namespace DuLink.Controllers
         // GET: Search
         public ActionResult Search()
         {
-            ViewBag.UsersList = null;
-            ViewBag.OfferList = null;
             return View();
         }
 
         [HttpPost]
-        public ActionResult Search(String keyWords,String UserSearch, String OfferSearch)
+        public ActionResult Search(String keyWords){
+            Session["BusquedaKeyWords"] = keyWords;
+            Session["TitleSearchUser"] = "Search User by Name";
+            Session["UsersList"] = accountModel.FindAllByName(keyWords);
+            Session["OfferList"] = null;
+            return View();
+        }
+
+        public ActionResult SearchType(String UserSearch, String OfferSearch)
         {
-            ViewBag.TitleSearchUser = "Search User by " + UserSearch;
-            ViewBag.TitleSearchOffer = "Search Offer by " + OfferSearch;
+            Session["TitleSearchUser"] = "Search User by " + UserSearch;
+            Session["TitleSearchOffer"]  = "Search Offer by " + OfferSearch;
             if (UserSearch.Equals("Name"))
             {
-                ViewBag.UsersList = accountModel.FindAllByName(keyWords);
+                Session["UsersList"] = accountModel.FindAllByName(Session["BusquedaKeyWords"].ToString());
             }
             else if (UserSearch.Equals("LastName"))
             {
-                ViewBag.UsersList = accountModel.FindAllByLastName(keyWords);
+                Session["UsersList"] = accountModel.FindAllByLastName(Session["BusquedaKeyWords"].ToString());
             }
             else if (UserSearch.Equals("Career"))
             {
-                ViewBag.UsersList = accountModel.FindAllByCareer(keyWords);
+                Session["UsersList"] = accountModel.FindAllByCareer(Session["BusquedaKeyWords"].ToString());
             }
             else if (UserSearch.Equals("Semester"))
             {
-                ViewBag.UsersList = accountModel.FindAllBySemester(keyWords);
-               
+                Session["UsersList"] = accountModel.FindAllBySemester(Session["BusquedaKeyWords"].ToString());
+            }
+            else {
+                Session["UsersList"] = null;
             }
 
             if (OfferSearch.Equals("CompanyName"))
             {
-                ViewBag.OfferList = jobOfferModel.FindAllByCompanyName(keyWords);
+                Session["OfferList"] = jobOfferModel.FindAllByCompanyName(Session["BusquedaKeyWords"].ToString());
             }
             else if (OfferSearch.Equals("Description"))
             {
-                ViewBag.OfferList = jobOfferModel.FindAllByDescription(keyWords);
+                Session["OfferList"] = jobOfferModel.FindAllByDescription(Session["BusquedaKeyWords"].ToString());
             }
-            return View();
+            else {
+                Session["OfferList"] = null;
+            }
+            return RedirectToAction("Search", "Search");
         }
-
     }
 }
