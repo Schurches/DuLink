@@ -213,9 +213,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobOfferController.cs" />
     <Compile Include="Controllers\PerfilController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Entities\JobOffer.cs" />
     <Compile Include="Entities\Jobs.cs" />
     <Compile Include="Global.asax.cs">
@@ -231,6 +231,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Job.png" />
     <Content Include="Content\Perfil.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -257,6 +258,7 @@
     <Content Include="Views\Perfil\Index.cshtml" />
     <Content Include="Views\JobOffer\Home.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Search\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

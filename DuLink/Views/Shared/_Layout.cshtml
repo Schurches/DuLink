@@ -21,11 +21,21 @@
             <button class="navbar-toggler text-light" type="button" data-toggle="collapse" data-target="#navbarUltra" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="h2">&equiv;</span>
             </button>
-            <form class="collapse navbar-collapse col justify-content-between pl-sm-0" id="navbarUltra">
+            <form action="\Search\Search" method="post" class="collapse navbar-collapse col justify-content-between pl-sm-0" id="navbarUltra">
                 <div class="input-group form-inline w-50">
-                    <input class="ml-0 form-control" type="text" placeholder="Buqueda" aria-label="Search" name="keyWords" style="border:none;border-radius:2px 0 0 2px" />
-                    <button class="ml-0 btn" type="submit" style="border:none;border-radius:0 2px 2px 0">Search</button>
+                    <input class="ml-0 form-control" type="text" placeholder="Buqueda" aria-label="Search" name="keyWords" style="border:none;border-radius:2px 0 0 2px" />   
                 </div>
+                <select name="UserSearch" class="dropdown-header">
+                    <option value="Name">Name</option>
+                    <option value="LastName">Last name</option>
+                    <option value="Career">Career</option>
+                    <option value="Semester">Semester</option>
+                </select>
+                <select name="OfferSearch" class="dropdown-header">
+                    <option value="CompanyName">Company name</option>
+                    <option value="Description">Description</option>
+                </select>
+                <button class="ml-0 btn" type="submit" style="border:none;border-radius:0 2px 2px 0">Search</button>
                 @Html.Partial("_LoginPartial")
             </form>
         </diFv>

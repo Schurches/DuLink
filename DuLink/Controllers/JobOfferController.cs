@@ -37,6 +37,11 @@ namespace DuLink.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Home(JobOffer newOffer)
         {
+            String idUserLog = Session["ID"].ToString();
+            Account userLog = accountModel.FindAccount(idUserLog);
+            String carrerauserLog = userLog.Career;
+            ViewBag.ListaContactos = getUserFriendsList(userLog);
+            ViewBag.ListaSugeridos = accountModel.FindSuggestedFriends(userLog);
             if (ModelState.IsValid){
                 jobOfferModel.CreateJobOffer(newOffer);
             }
