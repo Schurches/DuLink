@@ -91,5 +91,10 @@ namespace DuLink.Entities
             get;
             set;
         }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ca4c0b405513585b08ef7dd99e387539d3e71014
     }
 }

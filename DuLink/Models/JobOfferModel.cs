@@ -86,6 +86,30 @@ namespace DuLink.Models
             }
             return listaResult;
         }
+        public List<JobOffer> FindAllByCareer(String keyWords)
+        {
+            List<JobOffer> listaResult = new List<JobOffer>();
+            List<JobOffer> lista = jobOfferCollection.AsQueryable<JobOffer>().ToList();
+            String[] keys = keyWords.Replace(' ', ';').Split(';');
+            foreach (JobOffer i in lista)
+            {
+                foreach (String j in keys)
+                {
+                    if (j != "")
+                    {
+                        if (i.Career.ToLower().Contains(j.ToLower()))
+                        {
+                            if (!listaResult.Contains(i)) {
+                                listaResult.Add(i);
+                            }
+                            
+                        }
+                    }
+                }
+
+            }
+            return listaResult;
+        }
 
 
     }
