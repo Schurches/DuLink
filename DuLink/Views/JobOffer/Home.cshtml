@@ -7,8 +7,7 @@
             <div class="col-12 mt-2">
                 <h4>JobOffer</h4>
             </div>
-            @using (Html.BeginForm("Home", "JobOffer", FormMethod.Post, new { @class = "row" }))
-            {
+            <form action="/JobOffer/Home" method="post" class=" row">
                 @Html.AntiForgeryToken()
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 <div class="form-group col-lg-3 col-md-4 col-sm-6 my-1">
@@ -46,7 +45,7 @@
                     @Html.EditorFor(model => model.Position, new { htmlAttributes = new { @class = "form-control py-1" } })
                     @Html.ValidationMessageFor(model => model.Position, "", new { @class = "text-danger small" })
                 </div>
-                     
+
                 <div class="form-group col-lg-3 col-md-4 col-sm-6 my-1">
                     @Html.LabelFor(model => model.CompanyName, htmlAttributes: new { @class = "control-label small" })
                     @Html.EditorFor(model => model.CompanyName, new { htmlAttributes = new { @class = "form-control py-1" } })
@@ -56,30 +55,19 @@
                 <div class="form-group col-12">
                     <input type="submit" value="Create" class="btn btn-default" />
                 </div>
-            }
+            </form>
             <div class="col-12">
-                <div class="row">
-                    <h5>Ofetas laborales</h5>
-                </div>
-                <div class="row">
-                    <hr class="my-0" />
-                </div>
                 <div class="row" style="border-radius:3px;border:1px solid #ccc">
-
                     <div class="col-12" style="border-bottom:1px solid #ccc">
-                        <img src="~/Content/Perfil.png" alt="Alternate Text" style="width:50px;height:50px;border-radius:100%" />
+                        <img src="~/Content/as.jpg" alt="Alternate Text" style="width:50px;height:50px;border-radius:100%" />
                         <span>Nombre usuario</span>
                     </div>
                     <div class="col-12 my-2">
                         <h6>Oferta laboral de (Company)</h6>
                         <p>
-                            (Name), se necesita persona para el cargo de (cargo) con un salario estimado de (salary)
-                        </p>
-                        <p>
-                            Descripción: (Descripción)
+                            asionaiowdbioadaodbaiodwbawiubdipawñbdwoabñ wdapbwdawbdaibdiuapwbdauwipdbuawd
                         </p>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -87,37 +75,50 @@
     <div class="col-lg-4 col-md-5">
         <div class="row container">
 
-            <div class="col-12">
-                <h6>Sugeridos</h6>
-            </div>
+            <h5>Sugeridos</h5>
             <div style="height:210px;overflow-y:auto" class="col-12">
-                    @foreach (var Sugerido in ViewBag.ListaSugeridos)
+                @if (ViewBag.ListaSugeridos != null)
+                {
+                    foreach (var Sugerido in ViewBag.ListaSugeridos)
                     {
                         <div class="img-thumbnail col-12">
                             <h6>@Sugerido.Name</h6>
                             <img src="~/Content/Perfil.png" alt="Imagen del perfil" style="height:100px" />
-                            <button class="btn btn-primary p-1">Follow</button>
+                            <a href="@Url.Action("addFriend", "JobOffer", new { username = Sugerido.UserName })">
+                                <button class="btn btn-primary">Follow</button>
+                            </a>
                         </div>
                     }
+                }
+                else
+                {
+                    <div class="img-thumbnail col-12">
+                        <h6>You must log in to see suggested people</h6>
+                    </div>
+                }
             </div>
 
             <div class="col-12 row contactos">
                 <div class="col-12">
                     <h6>Contactos</h6>
                 </div>
-                @foreach (var Contact in ViewBag.ListaContactos)
+                @if (ViewBag.ListaContactos != null)
                 {
-                    <a href="@Url.Action("Index", "Perfil", new {userID = Contact.Id})" class="col-12 my-1 contacto">
-                        <img src="~/Content/Perfil.png" alt="Alternate Text" style="width:50px;height:50px;border-radius:100%" />
-                        <span>@Contact.Name</span>
-                    </a>
+                    foreach (var Contact in ViewBag.ListaContactos)
+                    {
+                        <a href="@Url.Action("Index", "Perfil", new {userID = Contact.Id})" class="col-12 my-1 contacto">
+                            <img src="~/Content/Perfil.png" alt="Alternate Text" style="width:50px;height:50px;border-radius:100%" />
+                            <span>@Contact.Name</span>
+                        </a>
+                    }
                 }
-
+                else
+                {
+                    <span>Log in to display your contacts!</span>
+                }
             </div>
         </div>
     </div>
-
 </div>
-
 
 

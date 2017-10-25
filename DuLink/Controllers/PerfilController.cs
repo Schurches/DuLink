@@ -14,23 +14,39 @@ namespace DuLink.Controllers
         JobsModel jobModel = new JobsModel();
         // GET: Perfil
 
-        
+        public ActionResult Index(Jobs job)
+        {
+            return View(job);
+        }
 
         [HttpGet]
         public ActionResult Index(String userID)
         {
             if (Session["ID"] != null)
             {
-                Account currentUser = accountModel.FindAccount(userID);
-                getUserJobsList(currentUser);
-                getUserFriendsList(currentUser);
-                ViewBag.ProfileUsername = currentUser.UserName;
-                ViewBag.ProfileName = currentUser.Name;
-                ViewBag.ProfileLastname = currentUser.LastName;
-                ViewBag.ProfileCareer = currentUser.Career;
-                ViewBag.ProfileSemester = currentUser.Semester;
-                ViewBag.ProfileEmail = currentUser.Mail;
-                ViewBag.ProfileID = userID;
+                if(userID == null)
+                {
+                    userID = Session["ID"].ToString();
+                }else
+                {
+                    if (!userID.Equals(Session["ID"]))
+                    {
+                        Account currentUser = accountModel.FindAccount(Session["ID"].ToString());
+                        if (currentUser.FriendsList.Contains(userID) || Session["ID"].ToString().Equals(userID))
+                        {
+                            ViewBag.isFriend = true;
+                        }
+                        else
+                        {
+                            ViewBag.isFriend = false;
+                        }
+                    }
+                }
+                Account currentProfile = accountModel.FindAccount(userID);
+                getUserJobsList(currentProfile);
+                getUserFriendsList(currentProfile);
+                ViewBag.Profile = currentProfile;
+                ViewBag.ProfileID = currentProfile.Id.ToString();
             }
             else
             {
@@ -39,6 +55,8 @@ namespace DuLink.Controllers
             return View();
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult AddJob(Jobs newJob)
         {
             /*************************************************************************************************/
@@ -52,10 +70,13 @@ namespace DuLink.Controllers
                 Jobs lastJob = jobModel.FindAll().Last();
                 jobModel.CreateJobs(newJob);
                 Account currentUser = accountModel.FindAccount(Session["ID"].ToString());
-                accountModel.addJobToUser(jobModel.getLastAddedJob().Id.ToString(),currentUser,lastJob);
+                accountModel.addJobToUser(jobModel.getLastAddedJob().Id.ToString(), currentUser, lastJob);
                 getUserJobsList(currentUser);
+                return RedirectToAction("Index", new { userID = Session["ID"].ToString() });
+            }else
+            {
+                return RedirectToAction("Index", newJob);
             }
-            return RedirectToAction("Index", new {userID = Session["ID"].ToString()});
         }
         
         public void getUserJobsList(Account currentUser)
@@ -78,6 +99,13 @@ namespace DuLink.Controllers
             }
             ViewBag.FriendsCount = allFriends.Count;
             ViewBag.FriendsList = allFriends;
+        }
+
+        [HttpGet]
+        public ActionResult addFriend(String username)
+        {
+            accountModel.addFriend(accountModel.FindAccountByName(username).Id.ToString(), accountModel.FindAccount(Session["ID"].ToString()));
+            return RedirectToAction("Index", "Perfil");
         }
 
     }
