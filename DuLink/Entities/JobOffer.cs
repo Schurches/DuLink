@@ -82,5 +82,14 @@ namespace DuLink.Entities
             set;
         }
 
+        [BsonElement("JobOfferCareer")]
+        [Required(ErrorMessage = "This field is required!", AllowEmptyStrings = false)]
+        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "This field must only contain letters")]
+        [StringLength(20, ErrorMessage = "Name must not exceed {1} characters or be less than {2}", MinimumLength = 4)]
+        public String Career
+        {
+            get;
+            set;
+        }
     }
 }
