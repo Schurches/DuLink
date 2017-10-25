@@ -53,7 +53,7 @@
             <div class="container">
 
                 <div class="col-12">
-                    <h3>Job history</h3>
+                    <h4>Job history</h4>
                 </div>
                 <div>
                     <hr class="my-0" />
@@ -62,12 +62,12 @@
                 {
                     <div class="col-12 my-3">
                         <h5>Add a new job</h5>
-                        @using (Html.BeginForm("AddJob", "Perfil", FormMethod.Post, new { @class = "form-group row" }))
+                        @using (Html.BeginForm("AddJob", "Perfil", FormMethod.Post, new { @class = "form-group row border rounded" }))
                         {
                             @Html.AntiForgeryToken()
                             <div class="col-md-6">
                                 <label>Company</label>
-                                @Html.EditorFor(model => model.CompanyName, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.EditorFor(model => model.CompanyName, new { htmlAttributes = new { style="background-color:white", @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.CompanyName, "", new { @class = "text-danger" })
                             </div>
                             <div class="col-md-6">
@@ -93,9 +93,6 @@
                 }
                 @if (ViewBag.JobCount != 0)
                 {
-                    <div>
-                        <hr class="my-0" />
-                    </div>
                     <div class="col-12">
                         <h4>Jobs</h4>
                         <hr class="my-0" />
@@ -137,7 +134,7 @@
         <div class="col-12 row contactos container">
             <!-- Job information-->
             <div class="col-12">
-                <h3>Friends list</h3>
+                <h6>Friends list</h6>
             </div>
             <div>
                 <hr class="my-0" />
@@ -148,7 +145,6 @@
                 foreach (var friend in ViewBag.FriendsList)
                 {
                     <div class="col-12 mt-1">
-                            
                         <a href="@Url.Action("Index", "Perfil", new { userID = friend.Id})" class="col-12 my-1 contacto">
                             <img src="~/Content/Perfil.png" alt="Alternate Text" style="width:50px;height:50px;border-radius:100%" />
                             <span>@friend.Name</span>
@@ -158,15 +154,9 @@
             }
             else
             {
-                <h4 class="card-title">No friends to display</h4>
+                <h6 class="card-title">No friends to display</h6>
             }
         </div>
-            <!--<div class="img-thumbnail" style="overflow:hidden">
-                                <img src="~/Content/manc.png" alt="Imagen del perfil" style="max-height:60px;min-height:60px" />
-                                <a href="Url.Action("Index", "Perfil", new { userID = friend.Id})">
-                                    <span class="card-title h2">friend.Name</span>
-                                </a>
-                            </div>-->
     </div>
 </div>
 

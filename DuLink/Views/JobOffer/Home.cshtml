@@ -58,17 +58,28 @@
                 </div>
             }
             <div class="col-12">
+                <div class="row">
+                    <h5>Ofetas laborales</h5>
+                </div>
+                <div class="row">
+                    <hr class="my-0" />
+                </div>
                 <div class="row" style="border-radius:3px;border:1px solid #ccc">
+
                     <div class="col-12" style="border-bottom:1px solid #ccc">
-                        <img src="~/Content/as.jpg" alt="Alternate Text" style="width:50px;height:50px;border-radius:100%" />
+                        <img src="~/Content/Perfil.png" alt="Alternate Text" style="width:50px;height:50px;border-radius:100%" />
                         <span>Nombre usuario</span>
                     </div>
                     <div class="col-12 my-2">
                         <h6>Oferta laboral de (Company)</h6>
                         <p>
-                            asionaiowdbioadaodbaiodwbawiubdipawñbdwoabñ wdapbwdawbdaibdiuapwbdauwipdbuawd
+                            (Name), se necesita persona para el cargo de (cargo) con un salario estimado de (salary)
+                        </p>
+                        <p>
+                            Descripción: (Descripción)
                         </p>
                     </div>
+
                 </div>
                
 
@@ -78,7 +89,9 @@
     <div class="col-lg-4 col-md-5">
         <div class="row container">
 
-            <h5>Sugeridos</h5>
+            <div class="col-12">
+                <h6>Sugeridos</h6>
+            </div>
             <div style="height:210px;overflow-y:auto" class="col-12">
                     @foreach (var Sugerido in ViewBag.ListaSugeridos)
                     {
