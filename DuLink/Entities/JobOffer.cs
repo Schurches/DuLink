@@ -77,5 +77,7 @@ namespace DuLink.Entities
             get;
             set;
         }
+
+
     }
 }

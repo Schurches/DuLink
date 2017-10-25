@@ -3,91 +3,67 @@
 
 <div class="container row">
     <div class="col-lg-8 col-md-7" style="background-color:white">
-        <div class="container row mb-4">
-            <div class="col-12 my-3">
-                <h4>Publish Job Offer</h4>
+        <div class="container row">
+            <div class="col-12 mt-2">
+                <h4>JobOffer</h4>
             </div>
-            <form action="/JobOffer/Home" method="post" class="col-12">
+            <form action="/JobOffer/Home" method="post" class=" row">
                 @Html.AntiForgeryToken()
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <div class="row" style="border:1px solid #eee;border-radius:3px;">
-                    <div class="form-group col-lg-3 col-md-4 col-sm-6 my-1">
-                        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label small" })
-                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control py-1" } })
-                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger small" })
-                    </div>
+                <div class="form-group col-lg-3 col-md-4 col-sm-6 my-1">
+                    @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label small" })
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control py-1" } })
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger small" })
+                </div>
 
-                    <div class="form-group col-lg-3 col-md-4 col-sm-6 my-1">
-                        @Html.LabelFor(model => model.Salary, htmlAttributes: new { @class = "control-label small" })
-                        @Html.EditorFor(model => model.Salary, new { htmlAttributes = new { @class = "form-control py-1" } })
-                        @Html.ValidationMessageFor(model => model.Salary, "", new { @class = "text-danger small" })
-                    </div>
+                <div class="form-group col-lg-3 col-md-4 col-sm-6 my-1">
+                    @Html.LabelFor(model => model.Salary, htmlAttributes: new { @class = "control-label small" })
+                    @Html.EditorFor(model => model.Salary, new { htmlAttributes = new { @class = "form-control py-1" } })
+                    @Html.ValidationMessageFor(model => model.Salary, "", new { @class = "text-danger small" })
+                </div>
 
-                    <div class="form-group col-lg-3 col-md-4 col-sm-6 my-1">
-                        @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label small" })
-                        @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control py-1" } })
-                        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger small" })
-                    </div>
+                <div class="form-group col-lg-3 col-md-4 col-sm-6 my-1">
+                    @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label small" })
+                    @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control py-1" } })
+                    @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger small" })
+                </div>
 
-                    <div class="form-group col-lg-3 col-md-4 col-sm-6 my-1">
-                        @Html.LabelFor(model => model.Contact, htmlAttributes: new { @class = "control-label small" })
-                        @Html.EditorFor(model => model.Contact, new { htmlAttributes = new { @class = "form-control py-1" } })
-                        @Html.ValidationMessageFor(model => model.Contact, "", new { @class = "text-danger small" })
-                    </div>
+                <div class="form-group col-lg-3 col-md-4 col-sm-6 my-1">
+                    @Html.LabelFor(model => model.Contact, htmlAttributes: new { @class = "control-label small" })
+                    @Html.EditorFor(model => model.Contact, new { htmlAttributes = new { @class = "form-control py-1" } })
+                    @Html.ValidationMessageFor(model => model.Contact, "", new { @class = "text-danger small" })
+                </div>
 
-                    <div class="form-group col-lg-3 col-md-4 col-sm-6 my-1">
-                        @Html.LabelFor(model => model.ContactPhoneNumber, htmlAttributes: new { @class = "control-label small" })
-                        @Html.EditorFor(model => model.ContactPhoneNumber, new { htmlAttributes = new { @class = "form-control py-1" } })
-                        @Html.ValidationMessageFor(model => model.ContactPhoneNumber, "", new { @class = "text-danger small" })
-                    </div>
+                <div class="form-group col-lg-3 col-md-4 col-sm-6 my-1">
+                    @Html.LabelFor(model => model.ContactPhoneNumber, htmlAttributes: new { @class = "control-label small" })
+                    @Html.EditorFor(model => model.ContactPhoneNumber, new { htmlAttributes = new { @class = "form-control py-1" } })
+                    @Html.ValidationMessageFor(model => model.ContactPhoneNumber, "", new { @class = "text-danger small" })
+                </div>
 
-                    <div class="form-group col-lg-3 col-md-4 col-sm-6 my-1">
-                        @Html.LabelFor(model => model.Position, htmlAttributes: new { @class = "control-label small" })
-                        @Html.EditorFor(model => model.Position, new { htmlAttributes = new { @class = "form-control py-1" } })
-                        @Html.ValidationMessageFor(model => model.Position, "", new { @class = "text-danger small" })
-                    </div>
+                <div class="form-group col-lg-3 col-md-4 col-sm-6 my-1">
+                    @Html.LabelFor(model => model.Position, htmlAttributes: new { @class = "control-label small" })
+                    @Html.EditorFor(model => model.Position, new { htmlAttributes = new { @class = "form-control py-1" } })
+                    @Html.ValidationMessageFor(model => model.Position, "", new { @class = "text-danger small" })
+                </div>
 
-                    <div class="form-group col-lg-3 col-md-4 col-sm-6 my-1">
-                        @Html.LabelFor(model => model.CompanyName, htmlAttributes: new { @class = "control-label small" })
-                        @Html.EditorFor(model => model.CompanyName, new { htmlAttributes = new { @class = "form-control py-1" } })
-                        @Html.ValidationMessageFor(model => model.CompanyName, "", new { @class = "text-danger small" })
-                    </div>
+                <div class="form-group col-lg-3 col-md-4 col-sm-6 my-1">
+                    @Html.LabelFor(model => model.CompanyName, htmlAttributes: new { @class = "control-label small" })
+                    @Html.EditorFor(model => model.CompanyName, new { htmlAttributes = new { @class = "form-control py-1" } })
+                    @Html.ValidationMessageFor(model => model.CompanyName, "", new { @class = "text-danger small" })
+                </div>
 
-                    <div class="form-group col-lg-3 col-md-4 col-sm-6 my-1">
-                        @Html.LabelFor(model => model.Career, htmlAttributes: new { @class = "control-label small" })
-                        @Html.EditorFor(model => model.Career, new { htmlAttributes = new { @class = "form-control py-1" } })
-                        @Html.ValidationMessageFor(model => model.Career, "", new { @class = "text-danger small" })
-                    </div>
+                <div class="form-group col-lg-3 col-md-4 col-sm-6 my-1">
+                    @Html.LabelFor(model => model.Career, htmlAttributes: new { @class = "control-label small" })
+                    @Html.EditorFor(model => model.Career, new { htmlAttributes = new { @class = "form-control py-1" } })
+                    @Html.ValidationMessageFor(model => model.Career , "", new { @class = "text-danger small" })
+                </div>
 
-                    <div class="form-group col-12">
-                        <input type="submit" value="Create" class="btn btn-default" />
-                    </div>
+                <div class="form-group col-12">
+                    <input type="submit" value="Create" class="btn btn-default" />
                 </div>
             </form>
-            <div class="col-12 my-3">
-                <h4>Offers</h4>
-            </div>
             <div class="col-12">
-<<<<<<< HEAD
                 @if (ViewBag.ListaOfertas != null)
-=======
-                <div class="row" style="border-radius:3px;border:1px solid #ccc">
-                    <div class="col-12" style="border-bottom:1px solid #ccc">
-                        <img src="~/Content/Perfil.png" alt="Alternate Text" style="width:50px;height:50px;border-radius:100%" />
-                        <span>Nombre usuario</span>
-                    </div>
-                    <div class="col-12 my-2">
-                        <h6>Oferta laboral de (Company)</h6>
-                        <p>
-                            (Name), se necesita persona para el cargo de (cargo) con un salario estimado de (salary)
-                        </p>
-                        <p>
-                            Descripción: (Descripción)
-                        </p>
-                    </div>
-                </div>
-                @if (ViewBag.ListaOfertas!=null)
->>>>>>> 93d6497a1629488c0812848bebe9154de82bfa06
                 {
                     foreach (var Offer in ViewBag.ListaOfertas)
                     {
@@ -107,30 +83,25 @@
                             </div>
                         </div>
                     }
-<<<<<<< HEAD
                 }
                 
-=======
-                }}
->>>>>>> 93d6497a1629488c0812848bebe9154de82bfa06
             </div>
         </div>
     </div>
     <div class="col-lg-4 col-md-5">
         <div class="row container">
-            <div class="col-12 my-1">
-                <h5>Sugeridos</h5>
-            </div>
+
+            <h5>Sugeridos</h5>
             <div style="height:210px;overflow-y:auto" class="col-12">
                 @if (ViewBag.ListaSugeridos != null)
                 {
                     foreach (var Sugerido in ViewBag.ListaSugeridos)
                     {
-                        <div class="img-thumbnail col-12 my-1">
+                        <div class="img-thumbnail col-12">
                             <h6>@Sugerido.Name</h6>
-                            <img src="~/Content/Perfil.png" alt="Imagen del perfil" style="height:50px" />
-                            <a href="@Url.Action("addFriend", "JobOffer", new { username = Sugerido.UserName })" class="btn btn-primary py-1">
-                            Follow
+                            <img src="~/Content/Perfil.png" alt="Imagen del perfil" style="height:100px" />
+                            <a href="@Url.Action("addFriend", "JobOffer", new { username = Sugerido.UserName })">
+                                <button class="btn btn-primary">Follow</button>
                             </a>
                         </div>
                     }
@@ -144,8 +115,8 @@
             </div>
 
             <div class="col-12 row contactos">
-                <div class="col-12 my-1">
-                    <h5>Contactos</h5>
+                <div class="col-12">
+                    <h6>Contactos</h6>
                 </div>
                 @if (ViewBag.ListaContactos != null)
                 {
