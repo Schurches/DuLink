@@ -38,7 +38,7 @@ namespace DuLink.Models
                     {
                         if (j != "")
                         {
-                            if (i.Career.Contains(keyWords))
+                            if (i.Career.ToLower().Contains(j.ToLower()))
                             {
                                 listaResult.Add(i);
                             }
@@ -62,7 +62,7 @@ namespace DuLink.Models
                     {
                         if (j != "")
                         {
-                            if (i.Semester.Contains(keyWords))
+                            if (i.Semester.ToLower().Contains(j.ToLower()))
                             {
                                 listaResult.Add(i);
                             }
@@ -87,7 +87,7 @@ namespace DuLink.Models
                     {
                         if (j != "")
                         {
-                            if (i.Name.Contains(keyWords))
+                            if (i.Name.ToLower().Contains(j.ToLower()))
                             {
                                 listaResult.Add(i);
                             }
@@ -111,7 +111,7 @@ namespace DuLink.Models
                     {
                         if (j != "")
                         {
-                            if (i.LastName.Contains(keyWords))
+                            if (i.LastName.ToLower().Contains(j.ToLower()))
                             {
                                 listaResult.Add(i);
                             }
