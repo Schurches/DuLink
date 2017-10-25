@@ -15,16 +15,31 @@ namespace DuLink.Controllers
         // GET: JobOffer
         public ActionResult Home()
         {
+<<<<<<< HEAD
             if (Session["ID"] != null) {
                 String idUserLog=Session["ID"].ToString();
+=======
+            if (Session["ID"] != null)
+            {
+                String idUserLog = Session["ID"].ToString();
+>>>>>>> 93d6497a1629488c0812848bebe9154de82bfa06
                 Account userLog = accountModel.FindAccount(idUserLog);
                 String carrerauserLog = userLog.Career;
                 ViewBag.UsuarioOffer = userLog;
                 ViewBag.ListaOfertas = jobOfferModel.FindAllByCareer(userLog.Career);
                 ViewBag.ListaContactos = getUserFriendsList(userLog);
+<<<<<<< HEAD
                 ViewBag.ListaSugeridos = accountModel.FindSuggestedFriends(userLog); 
             }
 
+=======
+                ViewBag.ListaSugeridos = accountModel.FindSuggestedFriends(userLog);
+            }
+            else
+            {
+                //Johan, aqui es donde agregaras la busqueda de los 5 o 10 ultimos de la BD.
+            }
+>>>>>>> 93d6497a1629488c0812848bebe9154de82bfa06
             return View();
         }
 

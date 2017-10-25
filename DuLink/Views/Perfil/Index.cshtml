@@ -5,30 +5,31 @@
 
 <div class="container-fluid row pt-4">
     <div class="col-lg-3 col-md-5 col-sm-12 text-center">
+
+        <!--Perfil información-->
         <div class="row justify-content-center rounded" style="background-color:white;border:1px solid #ccc">
 
             <div class="col-12 mt-1">
                 <div class="img-thumbnail" style="overflow:hidden">
-                    <h2 class="card-title">@ViewBag.Profile.UserName</h2>
+                    <h3 class="card-title">@ViewBag.Profile.UserName</h3>
                     <img src="~/Content/Perfil.png" alt="Imagen del perfil" style="max-height:240px;min-height:230px" />
                     @if (ViewBag.isFriend == false)
                     {
-                        <a href="@Url.Action("addFriend", "Perfil", new { username = ViewBag.Profile.UserName })">
-                            <button class="btn btn-primary">Follow</button>
+                        <a href="@Url.Action("addFriend", "Perfil", new { username = ViewBag.Profile.UserName })" class="btn btn-primary">
+                           Follow
                         </a>
                     }
                 </div>
             </div>
 
             <div class="my-2">
-                <span class="h5">Information</span>
+                <h5>Information</h5>
             </div>
 
             <div class="col-12">
                 <hr class="my-0" />
             </div>
 
-            <!-- Profile information-->
             <div class="mt-2 col-12">
                 <div class="py-2 my-1 trabajoPlantilla">
                     <span class="text-muted mr-2">Name:</span>
@@ -58,39 +59,38 @@
             <!-- Job information-->
             <div class="container">
 
-                <div class="col-12">
-                    <h3>Job history</h3>
-                </div>
-                <div>
-                    <hr class="my-0" />
-                </div>
+                
                 @if (ViewBag.ProfileID == Session["ID"].ToString())
-                {
-                    <div class="col-12 my-3">
+                {   <div class="col-12 my-2">
                         <h5>Add a new job</h5>
+                    </div>
+                    <div class="col-12">
+                        <hr class="my-0" />
+                    </div>
+                    <div class="col-12 my-3 border rounded" style="background-color:white">
                         <form action="/Perfil/AddJob" method="post" class="form-group row">
                             @Html.AntiForgeryToken()
                             <div class="col-md-6">
-                                <label>Company</label>
-                                @Html.EditorFor(model => model.CompanyName, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.CompanyName, "", new { @class = "text-danger" })
+                                <label class="small">Company</label>
+                                @Html.EditorFor(model => model.CompanyName, new { htmlAttributes = new { @class = "form-control py-1" } })
+                                @Html.ValidationMessageFor(model => model.CompanyName, "", new { @class = "text-danger small" })
                             </div>
                             <div class="col-md-6">
-                                <label>Charge</label>
-                                @Html.EditorFor(model => model.Position, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.Position, "", new { @class = "text-danger" })
+                                <label class="small">Charge</label>
+                                @Html.EditorFor(model => model.Position, new { htmlAttributes = new { @class = "form-control py-1" } })
+                                @Html.ValidationMessageFor(model => model.Position, "", new { @class = "text-danger small" })
                             </div>
                             <div class="col-md-6">
-                                <label>Since</label>
-                                @Html.EditorFor(model => model.StartDate, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger" })
+                                <label class="small">Since</label>
+                                @Html.EditorFor(model => model.StartDate, new { htmlAttributes = new { @class = "form-control py-1" } })
+                                @Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger small" })
                             </div>
                             <div class="col-md-6">
-                                <label>Until</label>
-                                @Html.EditorFor(model => model.EndDate, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.EndDate, "", new { @class = "text-danger" })
+                                <label class="small">Until</label>
+                                @Html.EditorFor(model => model.EndDate, new { htmlAttributes = new { @class = "form-control py-1" } })
+                                @Html.ValidationMessageFor(model => model.EndDate, "", new { @class = "text-danger small" })
                             </div>
-                            <div class="col-12 my-2">
+                            <div class="col-12 my-2 py-1 px-3">
                                 <button class="btn btn-outline-dark" type="submit">Add</button>
                             </div>
                         </form>
@@ -98,14 +98,13 @@
                 }
                 @if (ViewBag.JobCount != 0)
                 {
-                    <div>
+                    <div class="col-12">
+                        <h5>Jobs History</h5>
+                    </div>
+                    <div class="col-12">
                         <hr class="my-0" />
                     </div>
                     <div class="col-12">
-                        <h4>Jobs</h4>
-                        <hr class="my-0" />
-                    </div>
-                    <div style="height:340px;overflow:scroll">
                         <!--Job records-->
                         @foreach (var job in ViewBag.Jobs)
                         {
@@ -142,9 +141,9 @@
         <div class="col-12 row contactos container">
             <!-- Job information-->
             <div class="col-12">
-                <h3>Friends list</h3>
+                <h5>Friends list</h5>
             </div>
-            <div>
+            <div class="col-12">
                 <hr class="my-0" />
             </div>
 
@@ -152,17 +151,15 @@
             {
                 foreach (var friend in ViewBag.FriendsList)
                 {
-                    <div class="col-12 mt-1">
-                        <a href="@Url.Action("Index", "Perfil", new { userID = friend.Id })" class="col-12 my-1 contacto">
-                            <img src="~/Content/Perfil.png" alt="Alternate Text" style="width:50px;height:50px;border-radius:100%" />
-                            <span>@friend.Name</span>
-                        </a>
-                    </div>
+                    <a href="@Url.Action("Index", "Perfil", new { userID = friend.Id })" class="col-12 my-1 contacto">
+                        <img src="~/Content/Perfil.png" alt="Alternate Text" style="width:50px;height:50px;border-radius:100%" />
+                        <span>@friend.Name</span>
+                    </a>
                 }
             }
             else
             {
-                <h4 class="card-title">No friends to display</h4>
+                <h6 class="card-title">No friends to display</h6>
             }
         </div>
     </div>
