@@ -18,6 +18,8 @@ namespace DuLink.Controllers
             String idUserLog=Session["ID"].ToString();
             Account userLog = accountModel.FindAccount(idUserLog);
             String carrerauserLog = userLog.Career;
+            ViewBag.UsuarioOffer = userLog;
+            ViewBag.ListaOfertas = jobOfferModel.FindAllByCareer(userLog.Career);
             ViewBag.ListaContactos = getUserFriendsList(userLog);
             ViewBag.ListaSugeridos = accountModel.FindSuggestedFriends(userLog);
             return View();
@@ -40,6 +42,8 @@ namespace DuLink.Controllers
             String idUserLog = Session["ID"].ToString();
             Account userLog = accountModel.FindAccount(idUserLog);
             String carrerauserLog = userLog.Career;
+            ViewBag.UsuarioOffer = userLog;
+            ViewBag.ListaOfertas = jobOfferModel.FindAllByCareer(userLog.Career);
             ViewBag.ListaContactos = getUserFriendsList(userLog);
             ViewBag.ListaSugeridos = accountModel.FindSuggestedFriends(userLog);
             if (ModelState.IsValid){
